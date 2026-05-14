@@ -1893,6 +1893,7 @@ body.is-offcanvas-open {
 
   .text {
     padding: 2.5rem;
+    max-width: 32rem;
     color: $color-white;
   }
 
@@ -1962,6 +1963,7 @@ body.is-offcanvas-open {
   }
 
   .person {
+    margin-top: -4rem;
     padding: 0 2.5rem 2rem;
     text-align: center;
     color: $color-white;
