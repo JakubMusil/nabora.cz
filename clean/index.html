@@ -37,7 +37,97 @@
           </a>
           <nav class="primary" aria-label="Hlavní navigace">
             <a href="#sluzby">Služby</a>
-            <a href="#oborove">Oborové řešení</a>
+            <div class="has-sub">
+              <button
+                type="button"
+                class="sub-trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="oborove-submenu"
+              >
+                Oborové řešení
+                <svg
+                  class="chev"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                id="oborove-submenu"
+                class="submenu"
+                role="menu"
+                aria-label="Řešení podle oboru"
+              >
+                <p class="submenu-kicker">Řešení podle oboru</p>
+                <div class="submenu-grid">
+                  <a href="../it-vyvoj.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">{ }</span>
+                    <span>
+                      <strong>IT &amp; Vývoj</strong>
+                      <em>Vývojáři, analytici, DevOps…</em>
+                    </span>
+                  </a>
+                  <a href="../finance-ucetnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">▦</span>
+                    <span>
+                      <strong>Finance &amp; Účetnictví</strong>
+                      <em>Finanční ředitelé, účetní, kontroling…</em>
+                    </span>
+                  </a>
+                  <a href="../logistika-doprava.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">⛟</span>
+                    <span>
+                      <strong>Logistika &amp; Doprava</strong>
+                      <em>Řidiči, dispečeři, skladníci…</em>
+                    </span>
+                  </a>
+                  <a href="../vyroba-sklad.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">▣</span>
+                    <span>
+                      <strong>Výroba &amp; Sklad</strong>
+                      <em>Dělníci, mistři, technici…</em>
+                    </span>
+                  </a>
+                  <a href="../management-c-level.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">▤</span>
+                    <span>
+                      <strong>Management &amp; C-level</strong>
+                      <em>Ředitelé, CFO, COO, partneři…</em>
+                    </span>
+                  </a>
+                  <a href="../zdravotnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">♥</span>
+                    <span>
+                      <strong>Zdravotnictví</strong>
+                      <em>Lékaři, sestry, laboranti…</em>
+                    </span>
+                  </a>
+                  <a href="../stavebnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">⛑</span>
+                    <span>
+                      <strong>Stavebnictví</strong>
+                      <em>Inženýři, projektanti, dělníci…</em>
+                    </span>
+                  </a>
+                  <a href="../obchod-sales.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">🤝</span>
+                    <span>
+                      <strong>Obchod &amp; Sales</strong>
+                      <em>Obchodníci, account manažeři, BDR…</em>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
             <a href="#reference">Reference</a>
             <a href="#cenik">Ceník</a>
             <a href="#faq">FAQ</a>
@@ -51,11 +141,114 @@
             type="button"
             aria-label="Otevřít menu"
             aria-expanded="false"
+            aria-controls="offcanvas-menu"
           >
-            ☰
+            <span class="menu-toggle-bars" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
           </button>
         </div>
       </header>
+
+      <!-- Off-canvas mobilní menu, ovládané hamburgerem v hlavičce -->
+      <div
+        id="offcanvas-menu"
+        class="offcanvas"
+        hidden
+        aria-hidden="true"
+        aria-label="Mobilní navigace"
+      >
+        <div class="offcanvas-backdrop" data-offcanvas-close></div>
+        <div class="offcanvas-panel" role="dialog" aria-modal="true">
+          <div class="offcanvas-head">
+            <span class="offcanvas-title">Menu</span>
+            <button
+              type="button"
+              class="offcanvas-close"
+              aria-label="Zavřít menu"
+              data-offcanvas-close
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <nav class="offcanvas-nav" aria-label="Mobilní hlavní navigace">
+            <a href="#sluzby" data-offcanvas-close>Služby</a>
+            <div class="offcanvas-group">
+              <button
+                type="button"
+                class="offcanvas-sub-trigger"
+                aria-expanded="false"
+                aria-controls="offcanvas-oborove"
+              >
+                Oborové řešení
+                <svg
+                  class="chev"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="offcanvas-oborove" class="offcanvas-sub" hidden>
+                <a href="../it-vyvoj.html" data-offcanvas-close
+                  >IT &amp; Vývoj</a
+                >
+                <a href="../finance-ucetnictvi.html" data-offcanvas-close
+                  >Finance &amp; Účetnictví</a
+                >
+                <a href="../logistika-doprava.html" data-offcanvas-close
+                  >Logistika &amp; Doprava</a
+                >
+                <a href="../vyroba-sklad.html" data-offcanvas-close
+                  >Výroba &amp; Sklad</a
+                >
+                <a href="../management-c-level.html" data-offcanvas-close
+                  >Management &amp; C-level</a
+                >
+                <a href="../zdravotnictvi.html" data-offcanvas-close
+                  >Zdravotnictví</a
+                >
+                <a href="../stavebnictvi.html" data-offcanvas-close
+                  >Stavebnictví</a
+                >
+                <a href="../obchod-sales.html" data-offcanvas-close
+                  >Obchod &amp; Sales</a
+                >
+              </div>
+            </div>
+            <a href="#reference" data-offcanvas-close>Reference</a>
+            <a href="#cenik" data-offcanvas-close>Ceník</a>
+            <a href="#faq" data-offcanvas-close>FAQ</a>
+            <a href="#kontakt" data-offcanvas-close>Kontakt</a>
+          </nav>
+          <a
+            class="button-primary offcanvas-cta"
+            href="#kontakt"
+            data-offcanvas-close
+            >Pojďme to probrat</a
+          >
+        </div>
+      </div>
 
       <main>
         <!-- Hero -->
@@ -1031,7 +1224,22 @@
                     kampaň? Naši specialisté jsou připraveni vám pomoci.
                   </p>
                   <a class="phone" href="tel:+420722722712">
-                    <span class="icon-circle" aria-hidden="true">📞</span>
+                    <span class="icon-circle" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        ></path>
+                      </svg>
+                    </span>
                     <span class="number">+420 722 722 712</span>
                   </a>
                 </div>
@@ -1113,8 +1321,122 @@
           <span class="pulse-dot" aria-hidden="true"></span>
           Jsme na telefonu
         </span>
-        <a href="tel:+420722722712">📞 Volat hned</a>
+        <a href="tel:+420722722712">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+          Volat hned
+        </a>
       </div>
     </div>
+
+    <script>
+      (function () {
+        // Desktop submenu (Oborové řešení) — hover + klik/focus
+        document
+          .querySelectorAll(".site-header .has-sub")
+          .forEach(function (wrap) {
+            var trigger = wrap.querySelector(".sub-trigger");
+            if (!trigger) return;
+            var open = function () {
+              wrap.classList.add("is-open");
+              trigger.setAttribute("aria-expanded", "true");
+            };
+            var close = function () {
+              wrap.classList.remove("is-open");
+              trigger.setAttribute("aria-expanded", "false");
+            };
+            wrap.addEventListener("mouseenter", open);
+            wrap.addEventListener("mouseleave", close);
+            trigger.addEventListener("click", function (e) {
+              e.preventDefault();
+              if (wrap.classList.contains("is-open")) {
+                close();
+              } else {
+                open();
+              }
+            });
+            document.addEventListener("click", function (e) {
+              if (!wrap.contains(e.target)) close();
+            });
+            document.addEventListener("keydown", function (e) {
+              if (e.key === "Escape") close();
+            });
+          });
+
+        // Off-canvas mobilní menu
+        var toggle = document.querySelector(".site-header .menu-toggle");
+        var offcanvas = document.getElementById("offcanvas-menu");
+        if (toggle && offcanvas) {
+          var openMenu = function () {
+            offcanvas.hidden = false;
+            offcanvas.setAttribute("aria-hidden", "false");
+            toggle.setAttribute("aria-expanded", "true");
+            toggle.setAttribute("aria-label", "Zavřít menu");
+            document.body.classList.add("is-offcanvas-open");
+            // Spustí přechod v dalším framu
+            requestAnimationFrame(function () {
+              offcanvas.classList.add("is-open");
+            });
+          };
+          var closeMenu = function () {
+            offcanvas.classList.remove("is-open");
+            offcanvas.setAttribute("aria-hidden", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Otevřít menu");
+            document.body.classList.remove("is-offcanvas-open");
+            setTimeout(function () {
+              offcanvas.hidden = true;
+            }, 200);
+          };
+          toggle.addEventListener("click", function () {
+            if (toggle.getAttribute("aria-expanded") === "true") {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          });
+          offcanvas
+            .querySelectorAll("[data-offcanvas-close]")
+            .forEach(function (el) {
+              el.addEventListener("click", closeMenu);
+            });
+          document.addEventListener("keydown", function (e) {
+            if (
+              e.key === "Escape" &&
+              toggle.getAttribute("aria-expanded") === "true"
+            ) {
+              closeMenu();
+            }
+          });
+
+          // Vnořené rozbalovací skupiny v off-canvas (Oborové řešení)
+          offcanvas
+            .querySelectorAll(".offcanvas-sub-trigger")
+            .forEach(function (btn) {
+              var targetId = btn.getAttribute("aria-controls");
+              var panel = targetId ? document.getElementById(targetId) : null;
+              if (!panel) return;
+              btn.addEventListener("click", function () {
+                var expanded = btn.getAttribute("aria-expanded") === "true";
+                btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+                panel.hidden = expanded;
+              });
+            });
+        }
+      })();
+    </script>
   </body>
 </html>
