@@ -178,9 +178,18 @@
         </div>
       </header>
       <main class="flex-1">
-        <section class="bg-white">
+        <section class="bg-white relative overflow-hidden">
           <div
-            class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center"
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"
+          ></div>
+          <div
+            class="absolute top-10 right-10 w-2 h-2 rounded-full bg-gold/20"
+          ></div>
+          <div
+            class="absolute bottom-12 left-8 w-1.5 h-1.5 rounded-full bg-navy/10"
+          ></div>
+          <div
+            class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center relative z-10"
           >
             <p
               class="text-sm font-semibold text-gold uppercase tracking-widest mb-3"
@@ -188,32 +197,34 @@
               Oborové řešení / IT &amp; Vývoj
             </p>
             <h1
-              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight tracking-tight"
+              class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight tracking-tight"
             >
-              Najdeme IT kandidáty, kteří běžné inzeráty ignorují.
+              Získejte vývojáře, správce i IT specialisty dřív než konkurence.
             </h1>
             <p
-              class="mt-6 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed"
+              class="mt-6 text-base sm:text-lg lg:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed"
             >
-              Kampaně stavíme na datech, testování a správně zvolené komunikaci.
-              Oslovujeme aktivní i pasivní kandidáty napříč technologickými
-              rolemi.
+              Přetvoříme vaši IT pozici v cílenou náborovou kampaň. Oslovíme
+              aktivní i pasivní kandidáty podle stacku, seniority, lokality a
+              motivace — a dodáme vám měřitelné reakce místo čekání na
+              portálech.
             </p>
             <div
               class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <a
                 href="#kontakt"
-                class="inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-base px-8 py-4 rounded-lg transition-all duration-300"
-                >Nezávazná konzultace<i
+                class="inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-base px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg"
+                ><span>Chci IT kandidáty</span
+                ><i
                   data-lucide="arrow-right"
                   style="width: 16px; height: 16px"
                   aria-hidden="true"
                 ></i></a
               ><a
-                href="#jak"
+                href="#role"
                 class="inline-flex items-center gap-2 border-2 border-navy/20 hover:border-navy text-navy font-medium text-base px-8 py-4 rounded-lg transition-all duration-300"
-                >Jak to funguje</a
+                >Typické IT pozice</a
               >
             </div>
           </div>
@@ -221,70 +232,259 @@
         <section id="jak" class="py-20 sm:py-24 bg-gray-bg">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
+              <p
+                class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+              >
+                IT nábor bez čekání
+              </p>
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
                 Co řešíme v IT náboru
               </h2>
+              <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+                Technické profily často práci nehledají aktivně. Proto
+                kombinujeme výkonnostní reklamu, přesné cílení a srozumitelnou
+                nabídku, která kandidáta přiměje reagovat.
+              </p>
             </div>
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+              <article
+                class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <div
+                  class="flex items-center justify-center w-12 h-12 rounded-xl bg-navy/[0.08] text-gold mb-5"
+                >
+                  <i data-lucide="target" aria-hidden="true"></i>
+                </div>
                 <h3 class="text-lg font-bold text-navy">
-                  Nedostatek relevantních reakcí
+                  Málo relevantních reakcí
                 </h3>
                 <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Oslovujeme kandidáty podle stacku, seniority i lokality.
+                  Cílíme podle technologií, seniority, regionu i pracovní
+                  motivace. Nenaháníme počet CV, ale kandidáty, kteří dávají
+                  smysl pro váš tým.
                 </p>
               </article>
-              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+              <article
+                class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <div
+                  class="flex items-center justify-center w-12 h-12 rounded-xl bg-navy/[0.08] text-gold mb-5"
+                >
+                  <i data-lucide="timer" aria-hidden="true"></i>
+                </div>
                 <h3 class="text-lg font-bold text-navy">
                   Dlouhý náborový cyklus
                 </h3>
                 <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Optimalizujeme kampaně průběžně, aby se kvalitní reakce
-                  objevily co nejdříve.
+                  Kampaně průběžně testujeme a přesouváme rozpočet do sdělení a
+                  kanálů, které přinášejí nejkvalitnější reakce.
                 </p>
               </article>
-              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+              <article
+                class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <div
+                  class="flex items-center justify-center w-12 h-12 rounded-xl bg-navy/[0.08] text-gold mb-5"
+                >
+                  <i data-lucide="line-chart" aria-hidden="true"></i>
+                </div>
                 <h3 class="text-lg font-bold text-navy">Rozpočet bez výkonu</h3>
                 <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Každý kanál vyhodnocujeme na kvalitu kandidátů, ne jen na
-                  proklik.
+                  Vyhodnocujeme cenu za relevantní reakci, kvalitu kandidátů a
+                  zdroje. Díky tomu víte, co funguje a kde má smysl přidat.
                 </p>
               </article>
+            </div>
+          </div>
+        </section>
+        <section id="role" class="py-20 sm:py-24 bg-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+              <p
+                class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+              >
+                Typické pozice
+              </p>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
+                Pro jaké IT role kampaně stavíme
+              </h2>
+              <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+                Každý segment vyžaduje jiný argument, vizuál i kanál. Připravíme
+                kampaň pro jednu klíčovou pozici i dlouhodobý sběr uchazečů pro
+                více týmů najednou.
+              </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Vývoj a engineering
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Frontend, backend, full-stack, mobile vývojáři, DevOps, QA
+                  automation, tech lead nebo software architect.
+                </p>
+              </article>
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Data a analytika
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Datoví analytici, BI specialisté, data engineers, machine
+                  learning specialisté a role pracující s cloudovou analytikou.
+                </p>
+              </article>
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Infrastruktura a cloud
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Systémoví administrátoři, cloud engineers, SRE, síťaři,
+                  cybersecurity specialisté a správci interních systémů.
+                </p>
+              </article>
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Produkt a projektové řízení
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Product owner, product manager, scrum master, IT project
+                  manager nebo delivery manager pro interní i klientské týmy.
+                </p>
+              </article>
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Support a interní IT
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  IT support, helpdesk, aplikační specialisté, ERP konzultanti,
+                  správci Microsoft 365 nebo interních nástrojů.
+                </p>
+              </article>
+              <article
+                class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <h3
+                  class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
+                >
+                  Obchodní technické role
+                </h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Presales konzultanti, solution consultants, implementační
+                  specialisté a technicky orientovaní account manageři.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 sm:py-24 bg-gray-bg">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center bg-white rounded-2xl border border-gray-100 shadow-sm p-8 sm:p-10"
+            >
+              <div>
+                <p
+                  class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+                >
+                  Průběžný sběr uchazečů
+                </p>
+                <h2
+                  class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight"
+                >
+                  Budujte vlastní zásobník kandidátů, nejen jednorázový nábor.
+                </h2>
+                <p class="mt-4 text-gray-500 leading-relaxed">
+                  U IT rolí se vyplácí být vidět dlouhodobě. Vytvoříme kampaně,
+                  které sbírají kontakty na relevantní kandidáty i ve chvíli,
+                  kdy zrovna aktivně nehledají práci. Až otevřete další pozici,
+                  máte na koho navázat.
+                </p>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="rounded-2xl bg-gray-bg border border-gray-100 p-5">
+                  <p class="text-3xl font-bold text-navy">Non-stop</p>
+                  <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                    Kampaň průběžně sbírá reakce i mimo pracovní dobu
+                    recruiterů.
+                  </p>
+                </div>
+                <div class="rounded-2xl bg-gray-bg border border-gray-100 p-5">
+                  <p class="text-3xl font-bold text-navy">1 zdroj</p>
+                  <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                    Přehled reakcí, zdrojů a nákladů pro snadné vyhodnocení.
+                  </p>
+                </div>
+                <div
+                  class="rounded-2xl bg-gray-bg border border-gray-100 p-5 sm:col-span-2"
+                >
+                  <p class="text-3xl font-bold text-navy">Data</p>
+                  <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                    Zjistíte, které technologie, benefity a sdělení na kandidáty
+                    reálně fungují.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <section id="vysledky" class="py-20 sm:py-24 bg-white">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
+              <p
+                class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+              >
+                Výkon a transparentnost
+              </p>
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
                 Co od kampaní čekat
               </h2>
             </div>
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
               <article
-                class="bg-white rounded-2xl border border-gray-100 p-8 text-center"
+                class="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
               >
                 <p class="text-4xl sm:text-5xl font-bold text-navy">-35 %</p>
                 <p class="mt-2 text-sm text-gray-500">
-                  Průměrné snížení ceny za relevantní reakci.
+                  Průměrné snížení ceny za relevantní reakci díky průběžné
+                  optimalizaci.
                 </p>
               </article>
               <article
-                class="bg-white rounded-2xl border border-gray-100 p-8 text-center"
+                class="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
               >
                 <p class="text-4xl sm:text-5xl font-bold text-navy">
                   2–4 týdny
                 </p>
                 <p class="mt-2 text-sm text-gray-500">
-                  Na stabilní přísun kvalitních kandidátů.
+                  Na stabilní přísun dat a kandidátů pro první rozhodnutí.
                 </p>
               </article>
               <article
-                class="bg-white rounded-2xl border border-gray-100 p-8 text-center"
+                class="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
               >
                 <p class="text-4xl sm:text-5xl font-bold text-navy">100 %</p>
                 <p class="mt-2 text-sm text-gray-500">
-                  Transparentní reporting výkonu i nákladů.
+                  Transparentní reporting výkonu, zdrojů, rozpočtu a kvality
+                  reakcí.
                 </p>
               </article>
             </div>
@@ -293,31 +493,150 @@
         <section id="faq" class="py-20 sm:py-24 bg-gray-bg">
           <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
+              <p
+                class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+              >
+                FAQ
+              </p>
               <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
                 Časté otázky IT firem
               </h2>
+              <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+                Odpovědi na otázky, které firmy nejčastěji řeší před spuštěním
+                IT náborové kampaně.
+              </p>
             </div>
-            <div class="space-y-4">
-              <div
-                class="bg-white border border-gray-100 rounded-xl overflow-hidden"
+            <div
+              class="space-y-4"
+              data-faq-accordion="it"
+              role="region"
+              aria-label="Časté otázky IT firem"
+            >
+              <article
+                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
               >
                 <button
+                  type="button"
+                  data-faq-trigger=""
                   data-state="open"
-                  class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy"
+                  aria-expanded="true"
+                  aria-controls="faq-it-start"
+                  class="w-full flex items-start justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-navy hover:text-gold transition-colors duration-200"
                 >
-                  Jak rychle umíte kampaň spustit?
+                  Jak rychle umíte IT kampaň spustit?
                   <i
                     data-lucide="chevron-down"
-                    style="width: 18px; height: 18px"
+                    class="shrink-0 text-gray-400 transition-transform duration-200"
+                    style="width: 18px; height: 18px; transform: rotate(180deg)"
+                    aria-hidden="true"
                   ></i>
                 </button>
-                <div class="px-6 pb-5" style="height: auto; overflow: visible">
+                <div
+                  id="faq-it-start"
+                  class="px-6 pb-5"
+                  style="height: auto; overflow: visible"
+                >
                   <p class="text-sm text-gray-500 leading-relaxed">
                     Obvykle do 5 pracovních dnů od dodání podkladů a schválení
-                    strategie.
+                    strategie. Pomůžeme i s přepsáním pracovního inzerátu do
+                    řeči, která je pro IT kandidáty srozumitelná a důvěryhodná.
                   </p>
                 </div>
-              </div>
+              </article>
+              <article
+                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+              >
+                <button
+                  type="button"
+                  data-faq-trigger=""
+                  data-state="closed"
+                  aria-expanded="false"
+                  aria-controls="faq-it-stack"
+                  class="w-full flex items-start justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-navy hover:text-gold transition-colors duration-200"
+                >
+                  Potřebujeme znát přesný technologický stack?
+                  <i
+                    data-lucide="chevron-down"
+                    class="shrink-0 text-gray-400 transition-transform duration-200"
+                    style="width: 18px; height: 18px"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+                <div
+                  id="faq-it-stack"
+                  class="px-6 pb-5"
+                  style="height: 0; overflow: hidden"
+                >
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Ano, ale nemusí být dokonalý. V úvodní konzultaci si
+                    ujasníme must-have technologie, senioritu, tým, formu
+                    spolupráce, lokalitu a argumenty, které mohou kandidáty
+                    přesvědčit.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+              >
+                <button
+                  type="button"
+                  data-faq-trigger=""
+                  data-state="closed"
+                  aria-expanded="false"
+                  aria-controls="faq-it-passive"
+                  class="w-full flex items-start justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-navy hover:text-gold transition-colors duration-200"
+                >
+                  Umíte oslovit i pasivní kandidáty?
+                  <i
+                    data-lucide="chevron-down"
+                    class="shrink-0 text-gray-400 transition-transform duration-200"
+                    style="width: 18px; height: 18px"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+                <div
+                  id="faq-it-passive"
+                  class="px-6 pb-5"
+                  style="height: 0; overflow: hidden"
+                >
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Ano. Právě u IT rolí často pracujeme s lidmi, kteří práci
+                    aktivně nehledají. Kampaň proto stavíme na konkrétních
+                    důvodech ke změně, ne na obecném textu pracovního inzerátu.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+              >
+                <button
+                  type="button"
+                  data-faq-trigger=""
+                  data-state="closed"
+                  aria-expanded="false"
+                  aria-controls="faq-it-quality"
+                  class="w-full flex items-start justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-navy hover:text-gold transition-colors duration-200"
+                >
+                  Jak poznáme, že jsou reakce kvalitní?
+                  <i
+                    data-lucide="chevron-down"
+                    class="shrink-0 text-gray-400 transition-transform duration-200"
+                    style="width: 18px; height: 18px"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+                <div
+                  id="faq-it-quality"
+                  class="px-6 pb-5"
+                  style="height: 0; overflow: hidden"
+                >
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Sledujeme nejen cenu za kontakt, ale i shodu se stackem,
+                    senioritou, lokalitou a zpětnou vazbou vašeho HR nebo hiring
+                    manažera. Podle toho upravujeme texty, cílení i rozpočet.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
