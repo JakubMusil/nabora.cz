@@ -127,9 +127,26 @@ document.addEventListener('DOMContentLoaded', function () {
   // ─── FAQ Accordion ───
   document.querySelectorAll('[data-faq-accordion]').forEach(function (accordion) {
     accordion.querySelectorAll('[data-faq-trigger]').forEach(function (trigger) {
+      var content = trigger.nextElementSibling;
+      if (content) {
+        content.dataset.faqPaddingTop = window.getComputedStyle(content).paddingTop;
+        content.dataset.faqPaddingBottom = window.getComputedStyle(content).paddingBottom;
+
+        if (trigger.getAttribute('data-state') === 'open') {
+          content.style.overflow = 'visible';
+          content.style.height = 'auto';
+          content.style.paddingTop = content.dataset.faqPaddingTop;
+          content.style.paddingBottom = content.dataset.faqPaddingBottom;
+        } else {
+          content.style.overflow = 'hidden';
+          content.style.height = '0';
+          content.style.paddingTop = '0';
+          content.style.paddingBottom = '0';
+        }
+      }
+
       trigger.addEventListener('click', function () {
         var isOpen = trigger.getAttribute('data-state') === 'open';
-        var content = trigger.nextElementSibling;
         var chevron = trigger.querySelector('[data-lucide="chevron-down"]') || trigger.querySelector('svg');
 
         function closeItem(item) {
@@ -140,6 +157,8 @@ document.addEventListener('DOMContentLoaded', function () {
           if (itemContent) {
             itemContent.style.overflow = 'hidden';
             itemContent.style.height = '0';
+            itemContent.style.paddingTop = '0';
+            itemContent.style.paddingBottom = '0';
           }
           if (itemChevron) itemChevron.style.transform = '';
         }
@@ -158,6 +177,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (content) {
           content.style.overflow = 'visible';
           content.style.height = 'auto';
+          content.style.paddingTop = content.dataset.faqPaddingTop || '';
+          content.style.paddingBottom = content.dataset.faqPaddingBottom || '';
         }
         if (chevron) chevron.style.transform = 'rotate(180deg)';
       });
