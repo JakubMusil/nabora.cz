@@ -1632,6 +1632,7 @@ body.is-offcanvas-open {
 }
 .home-callout .text {
   padding: 2.5rem;
+  max-width: 32rem;
   color: #ffffff;
 }
 .home-callout .status-row {
@@ -1691,6 +1692,7 @@ body.is-offcanvas-open {
   color: #f48225;
 }
 .home-callout .person {
+  margin-top: -4rem;
   padding: 0 2.5rem 2rem;
   text-align: center;
   color: #ffffff;
