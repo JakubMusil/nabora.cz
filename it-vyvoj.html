@@ -199,7 +199,8 @@
             <h1
               class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight tracking-tight"
             >
-              Získejte vývojáře, správce i IT specialisty <span class="text-gold">dřív než konkurence.</span>
+              Získejte vývojáře, správce i IT specialisty
+              <span class="text-gold">dřív než konkurence.</span>
             </h1>
             <p
               class="mt-6 text-base sm:text-lg lg:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed"
@@ -398,7 +399,7 @@
                     <p
                       class="text-sm font-semibold text-gold uppercase tracking-widest mb-4"
                     >
-                      Spusťte kampaň
+                      Získejte více uchazečů
                     </p>
                     <h3
                       class="text-xl sm:text-2xl font-bold text-white leading-snug mb-4"
@@ -444,7 +445,7 @@
                       href="#kontakt"
                       class="inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-base px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
                     >
-                      <span>Získat nezávazný návrh</span>
+                      <span>Chci více uchazečů</span>
                       <i
                         data-lucide="arrow-right"
                         style="width: 16px; height: 16px"
@@ -571,152 +572,209 @@
           </div>
         </section>
         <section id="faq" class="py-20 sm:py-24 bg-gray-bg">
-          <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-              <p
-                class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
-              >
-                FAQ
-              </p>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
-                Časté otázky IT firem
-              </h2>
-              <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-                Odpovědi na otázky, které firmy nejčastěji řeší před spuštěním
-                IT náborové kampaně.
-              </p>
-            </div>
-            <div
-              class="space-y-5"
-              data-faq-accordion="it"
-              role="region"
-              aria-label="Časté otázky IT firem"
-            >
-              <article
-                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
-              >
-                <button
-                  type="button"
-                  data-faq-trigger=""
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="faq-it-start"
-                  class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
-                >
-                  Jak rychle umíte IT kampaň spustit?
-                  <i
-                    data-lucide="chevron-down"
-                    class="shrink-0 text-gray-400 transition-transform duration-200"
-                    style="width: 18px; height: 18px"
-                    aria-hidden="true"
-                  ></i>
-                </button>
-                <div
-                  id="faq-it-start"
-                  class="px-8 pb-8"
-                  style="height: 0; overflow: hidden"
-                >
-                  <p class="text-base text-gray-600 leading-relaxed">
-                    Obvykle do 5 pracovních dnů od dodání podkladů a schválení
-                    strategie. Pomůžeme i s přepsáním pracovního inzerátu do
-                    řeči, která je pro IT kandidáty srozumitelná a důvěryhodná.
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              <div>
+                <div class="mb-14 text-left">
+                  <p
+                    class="text-sm font-semibold text-gold uppercase tracking-widest mb-2"
+                  >
+                    FAQ
+                  </p>
+                  <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy"
+                  >
+                    Časté otázky IT firem
+                  </h2>
+                  <p class="mt-3 text-gray-500 max-w-2xl">
+                    Odpovědi na otázky, které firmy nejčastěji řeší před
+                    spuštěním IT náborové kampaně.
                   </p>
                 </div>
-              </article>
-              <article
-                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
-              >
-                <button
-                  type="button"
-                  data-faq-trigger=""
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="faq-it-stack"
-                  class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
-                >
-                  Potřebujeme znát přesný technologický stack?
-                  <i
-                    data-lucide="chevron-down"
-                    class="shrink-0 text-gray-400 transition-transform duration-200"
-                    style="width: 18px; height: 18px"
-                    aria-hidden="true"
-                  ></i>
-                </button>
                 <div
-                  id="faq-it-stack"
-                  class="px-8 pb-8"
-                  style="height: 0; overflow: hidden"
+                  class="space-y-5"
+                  data-faq-accordion="it"
+                  role="region"
+                  aria-label="Časté otázky IT firem"
                 >
-                  <p class="text-base text-gray-600 leading-relaxed">
-                    Ano, ale nemusí být dokonalý. V úvodní konzultaci si
-                    ujasníme must-have technologie, senioritu, tým, formu
-                    spolupráce, lokalitu a argumenty, které mohou kandidáty
-                    přesvědčit.
-                  </p>
+                  <article
+                    class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+                  >
+                    <button
+                      type="button"
+                      data-faq-trigger=""
+                      data-state="closed"
+                      aria-expanded="false"
+                      aria-controls="faq-it-start"
+                      class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
+                    >
+                      Jak rychle umíte IT kampaň spustit?
+                      <i
+                        data-lucide="chevron-down"
+                        class="shrink-0 text-gray-400 transition-transform duration-200"
+                        style="width: 18px; height: 18px"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <div
+                      id="faq-it-start"
+                      class="px-8 pb-8"
+                      style="height: 0; overflow: hidden"
+                    >
+                      <p class="text-base text-gray-600 leading-relaxed">
+                        Obvykle do 5 pracovních dnů od dodání podkladů a
+                        schválení strategie. Pomůžeme i s přepsáním pracovního
+                        inzerátu do řeči, která je pro IT kandidáty srozumitelná
+                        a důvěryhodná.
+                      </p>
+                    </div>
+                  </article>
+                  <article
+                    class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+                  >
+                    <button
+                      type="button"
+                      data-faq-trigger=""
+                      data-state="closed"
+                      aria-expanded="false"
+                      aria-controls="faq-it-stack"
+                      class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
+                    >
+                      Potřebujeme znát přesný technologický stack?
+                      <i
+                        data-lucide="chevron-down"
+                        class="shrink-0 text-gray-400 transition-transform duration-200"
+                        style="width: 18px; height: 18px"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <div
+                      id="faq-it-stack"
+                      class="px-8 pb-8"
+                      style="height: 0; overflow: hidden"
+                    >
+                      <p class="text-base text-gray-600 leading-relaxed">
+                        Ano, ale nemusí být dokonalý. V úvodní konzultaci si
+                        ujasníme must-have technologie, senioritu, tým, formu
+                        spolupráce, lokalitu a argumenty, které mohou kandidáty
+                        přesvědčit.
+                      </p>
+                    </div>
+                  </article>
+                  <article
+                    class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+                  >
+                    <button
+                      type="button"
+                      data-faq-trigger=""
+                      data-state="closed"
+                      aria-expanded="false"
+                      aria-controls="faq-it-passive"
+                      class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
+                    >
+                      Umíte oslovit i pasivní kandidáty?
+                      <i
+                        data-lucide="chevron-down"
+                        class="shrink-0 text-gray-400 transition-transform duration-200"
+                        style="width: 18px; height: 18px"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <div
+                      id="faq-it-passive"
+                      class="px-8 pb-8"
+                      style="height: 0; overflow: hidden"
+                    >
+                      <p class="text-base text-gray-600 leading-relaxed">
+                        Ano. Právě u IT rolí často pracujeme s lidmi, kteří
+                        práci aktivně nehledají. Kampaň proto stavíme na
+                        konkrétních důvodech ke změně, ne na obecném textu
+                        pracovního inzerátu.
+                      </p>
+                    </div>
+                  </article>
+                  <article
+                    class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
+                  >
+                    <button
+                      type="button"
+                      data-faq-trigger=""
+                      data-state="closed"
+                      aria-expanded="false"
+                      aria-controls="faq-it-quality"
+                      class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
+                    >
+                      Jak poznáme, že jsou reakce kvalitní?
+                      <i
+                        data-lucide="chevron-down"
+                        class="shrink-0 text-gray-400 transition-transform duration-200"
+                        style="width: 18px; height: 18px"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <div
+                      id="faq-it-quality"
+                      class="px-8 pb-8"
+                      style="height: 0; overflow: hidden"
+                    >
+                      <p class="text-base text-gray-600 leading-relaxed">
+                        Sledujeme nejen cenu za kontakt, ale i shodu se stackem,
+                        senioritou, lokalitou a zpětnou vazbou vašeho HR nebo
+                        hiring manažera. Podle toho upravujeme texty, cílení i
+                        rozpočet.
+                      </p>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article
-                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
-              >
-                <button
-                  type="button"
-                  data-faq-trigger=""
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="faq-it-passive"
-                  class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
-                >
-                  Umíte oslovit i pasivní kandidáty?
-                  <i
-                    data-lucide="chevron-down"
-                    class="shrink-0 text-gray-400 transition-transform duration-200"
-                    style="width: 18px; height: 18px"
-                    aria-hidden="true"
-                  ></i>
-                </button>
+              </div>
+              <div class="lg:pt-10">
                 <div
-                  id="faq-it-passive"
-                  class="px-8 pb-8"
-                  style="height: 0; overflow: hidden"
+                  class="bg-white border border-gray-100 rounded-3xl shadow-sm p-8 sm:p-10"
                 >
-                  <p class="text-base text-gray-600 leading-relaxed">
-                    Ano. Právě u IT rolí často pracujeme s lidmi, kteří práci
-                    aktivně nehledají. Kampaň proto stavíme na konkrétních
-                    důvodech ke změně, ne na obecném textu pracovního inzerátu.
+                  <p
+                    class="text-sm font-semibold text-gold uppercase tracking-widest"
+                  >
+                    Jak to funguje v praxi
                   </p>
-                </div>
-              </article>
-              <article
-                class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
-              >
-                <button
-                  type="button"
-                  data-faq-trigger=""
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="faq-it-quality"
-                  class="w-full flex items-start justify-between gap-6 p-8 text-left text-base sm:text-lg font-semibold text-navy hover:text-gold transition-colors duration-200"
-                >
-                  Jak poznáme, že jsou reakce kvalitní?
-                  <i
-                    data-lucide="chevron-down"
-                    class="shrink-0 text-gray-400 transition-transform duration-200"
-                    style="width: 18px; height: 18px"
-                    aria-hidden="true"
-                  ></i>
-                </button>
-                <div
-                  id="faq-it-quality"
-                  class="px-8 pb-8"
-                  style="height: 0; overflow: hidden"
-                >
-                  <p class="text-base text-gray-600 leading-relaxed">
-                    Sledujeme nejen cenu za kontakt, ale i shodu se stackem,
-                    senioritou, lokalitou a zpětnou vazbou vašeho HR nebo hiring
-                    manažera. Podle toho upravujeme texty, cílení i rozpočet.
+                  <h3
+                    class="mt-3 text-2xl sm:text-3xl font-bold text-navy leading-tight"
+                  >
+                    Podívejte se, proč výkonový personální marketing přivádí víc
+                    relevantních kandidátů než klasická HR agentura
+                  </h3>
+                  <p class="mt-4 text-gray-500 leading-relaxed">
+                    V krátkém videu account manažerka vysvětlí, jak nastavujeme
+                    kampaň, co firmám přináší a proč je výkonový nábor efektivní
+                    cestou k většímu počtu kvalitních uchazečů. Níže je zatím
+                    ukázkové YouTube video, které můžete později nahradit vaším
+                    vlastním obsahem.
                   </p>
+                  <div class="mt-8">
+                    <div
+                      class="relative w-full overflow-hidden rounded-2xl bg-navy shadow-lg"
+                      style="padding-top: 56.25%"
+                    >
+                      <iframe
+                        class="absolute inset-0 h-full w-full"
+                        src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                        title="Ukázkové video z YouTube"
+                        loading="lazy"
+                        allow="
+                          accelerometer;
+                          autoplay;
+                          clipboard-write;
+                          encrypted-media;
+                          gyroscope;
+                          picture-in-picture;
+                          web-share;
+                        "
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
@@ -775,7 +833,7 @@
                   class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs px-4 py-2 has-[&gt;svg]:px-3 w-full h-12 bg-gold hover:bg-gold-hover text-white font-semibold text-base rounded-lg transition-all duration-300"
                   type="submit"
                 >
-                  Získat nezávazný návrh
+                  Chci více uchazečů
                 </button>
               </form>
             </div>
