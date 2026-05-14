@@ -125,43 +125,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ─── FAQ Accordion ───
-  document.querySelectorAll('[data-faq-trigger]').forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
-      var isOpen = trigger.getAttribute('data-state') === 'open';
-      var content = trigger.nextElementSibling;
-      var chevron = trigger.querySelector('[data-lucide="chevron-down"]') || trigger.querySelector('svg');
-      var accordion = trigger.closest('[data-faq-accordion]');
+  document.querySelectorAll('[data-faq-accordion]').forEach(function (accordion) {
+    accordion.querySelectorAll('[data-faq-trigger]').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var isOpen = trigger.getAttribute('data-state') === 'open';
+        var content = trigger.nextElementSibling;
+        var chevron = trigger.querySelector('[data-lucide="chevron-down"]') || trigger.querySelector('svg');
 
-      function closeItem(item) {
-        var itemContent = item.nextElementSibling;
-        var itemChevron = item.querySelector('[data-lucide="chevron-down"]') || item.querySelector('svg');
-        item.setAttribute('data-state', 'closed');
-        item.setAttribute('aria-expanded', 'false');
-        if (itemContent) {
-          itemContent.style.overflow = 'hidden';
-          itemContent.style.height = '0';
+        function closeItem(item) {
+          var itemContent = item.nextElementSibling;
+          var itemChevron = item.querySelector('[data-lucide="chevron-down"]') || item.querySelector('svg');
+          item.setAttribute('data-state', 'closed');
+          item.setAttribute('aria-expanded', 'false');
+          if (itemContent) {
+            itemContent.style.overflow = 'hidden';
+            itemContent.style.height = '0';
+          }
+          if (itemChevron) itemChevron.style.transform = '';
         }
-        if (itemChevron) itemChevron.style.transform = '';
-      }
 
-      if (isOpen) {
-        closeItem(trigger);
-        return;
-      }
+        if (isOpen) {
+          closeItem(trigger);
+          return;
+        }
 
-      if (accordion) {
         accordion.querySelectorAll('[data-faq-trigger][data-state="open"]').forEach(function (other) {
           if (other !== trigger) closeItem(other);
         });
-      }
 
-      trigger.setAttribute('data-state', 'open');
-      trigger.setAttribute('aria-expanded', 'true');
-      if (content) {
-        content.style.overflow = 'visible';
-        content.style.height = 'auto';
-      }
-      if (chevron) chevron.style.transform = 'rotate(180deg)';
+        trigger.setAttribute('data-state', 'open');
+        trigger.setAttribute('aria-expanded', 'true');
+        if (content) {
+          content.style.overflow = 'visible';
+          content.style.height = 'auto';
+        }
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+      });
     });
   });
 
