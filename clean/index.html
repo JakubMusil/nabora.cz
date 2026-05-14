@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nabora — Clean šablona</title>
+    <meta
+      name="description"
+      content="Čistá bloková varianta šablony Nabora.cz s důrazem na znovupoužitelný HTML a SCSS."
+    />
+    <link rel="stylesheet" href="assets/clean.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="topbar">
+        <div class="container">
+          <strong>Jsme právě na telefonu.</strong>
+          <span>Zavolejte nám hned teď na</span>
+          <a href="tel:+420722722712">+420 722 722 712</a>
+        </div>
+      </div>
+
+      <header class="site-header">
+        <div class="container">
+          <a href="#" aria-label="Nabora domů">
+            <img src="../assets/logo.svg" alt="Nabora" />
+          </a>
+          <nav aria-label="Hlavní navigace">
+            <ul>
+              <li><a href="#sluzby">Služby</a></li>
+              <li><a href="#reference">Reference</a></li>
+              <li><a href="#cenik">Ceník</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="home-hero" id="sluzby">
+          <div class="container">
+            <div>
+              <h1>
+                Výkonnostní marketing pro nábor, který přivádí relevantní
+                uchazeče
+              </h1>
+              <p>
+                Vaši pracovní nabídku přetvoříme do reklamní kampaně a doručíme
+                ji tam, kde kandidáti skutečně tráví čas — na sociálních sítích
+                i ve vyhledávání.
+              </p>
+              <div class="actions">
+                <a href="#kontakt">Nezávazná konzultace</a>
+                <a href="#faq">Jak to funguje</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-faq" id="faq">
+          <div class="container">
+            <div class="section-intro">
+              <p>FAQ</p>
+              <h2>Často kladené otázky</h2>
+              <p>
+                Odpovědi na otázky, které firmy nejčastěji řeší před spuštěním
+                náborové kampaně a při rozhodování, jestli je výkonový nábor pro
+                ně správná cesta.
+              </p>
+            </div>
+
+            <div class="layout">
+              <ul class="faq-list">
+                <li>
+                  <details>
+                    <summary>
+                      Jak rychle umíte náborovou kampaň spustit?
+                    </summary>
+                    <p>
+                      Obvykle během několika pracovních dnů od dodání podkladů a
+                      schválení směru kampaně. Pomůžeme vám i s úpravou nabídky,
+                      argumentací a kreativitou tak, aby pozice zaujala
+                      relevantní kandidáty.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>
+                      Pro jaké pozice výkonový nábor funguje nejlépe?
+                    </summary>
+                    <p>
+                      Nejlépe tam, kde nestačí jen vystavit inzerát a čekat na
+                      odpovědi. Funguje pro výrobu, logistiku, obchod,
+                      administrativu, specialisty i IT role.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>
+                      Jak velký rozpočet je potřeba pro smysluplný start?
+                    </summary>
+                    <p>
+                      Záleží na lokalitě, konkurenci i typu pozice, ale vždy
+                      oddělujeme naši práci a mediální rozpočet. Díky tomu
+                      přesně víte, kolik šlo do kampaně a jaký výkon investice
+                      přinesla.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>
+                      Jak poznáme, že kampaň přivádí kvalitní uchazeče?
+                    </summary>
+                    <p>
+                      Nesledujeme jen počet reakcí, ale i relevanci, cenu, zdroj
+                      a zpětnou vazbu HR týmu. Podle dat průběžně upravujeme
+                      texty, cílení i rozpočet.
+                    </p>
+                  </details>
+                </li>
+              </ul>
+
+              <article class="video-card">
+                <p>Jak to funguje v praxi</p>
+                <h3>Proč výkonový nábor přivádí víc relevantních uchazečů</h3>
+                <p>
+                  V krátkém videu uvidíte, jak převádíme pracovní nabídku do
+                  výkonové kampaně, jak měříme výsledky a proč firmy osloví i
+                  kandidáty, kteří pracovní portály aktivně nesledují.
+                </p>
+                <div class="video">
+                  <iframe
+                    src="https://www.youtube.com/embed/qzGxK6Uiu04?si=-ZLBIQsHOXmfMcdt"
+                    title="Jak funguje výkonový nábor"
+                    loading="lazy"
+                    allow="
+                      accelerometer;
+                      autoplay;
+                      clipboard-write;
+                      encrypted-media;
+                      gyroscope;
+                      picture-in-picture;
+                      web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="kontakt">
+        <div class="container">
+          <div class="columns">
+            <div class="brand">
+              <img src="../assets/logo.svg" alt="Nabora" width="160" />
+              <p>
+                Výkonnostní marketingová agentura pro nábor. Doručujeme vaše
+                pracovní nabídky tam, kde kandidáti tráví čas.
+              </p>
+            </div>
+
+            <div class="links">
+              <section>
+                <h4>Navigace</h4>
+                <ul>
+                  <li><a href="#sluzby">Služby</a></li>
+                  <li><a href="#reference">Reference</a></li>
+                  <li><a href="#cenik">Ceník</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h4>Mohlo by se hodit</h4>
+                <ul>
+                  <li><a href="#">O nás</a></li>
+                  <li><a href="#">Články a novinky</a></li>
+                  <li><a href="#">Pro média</a></li>
+                  <li><a href="#">Ke stažení</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h4>Kontakt</h4>
+                <ul>
+                  <li>info@nabora.cz</li>
+                  <li>+420 722 722 712</li>
+                  <li>Praha, Česká republika</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span>© 2026 Nabora. Všechna práva vyhrazena.</span>
+            <nav aria-label="Právní informace">
+              <a href="#">Ochrana osobních údajů</a>
+              <a href="#">Obchodní podmínky</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
