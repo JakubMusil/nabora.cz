@@ -180,7 +180,6 @@ i[data-lucide] svg {
 
   p {
     margin: 0.875rem auto 0;
-    max-width: 36rem;
     color: $color-muted;
   }
 
@@ -848,6 +847,7 @@ body.is-offcanvas-open {
   .container-narrow {
     position: relative;
     z-index: 1;
+    max-width: 50rem;
   }
 
   h1 {
@@ -860,7 +860,6 @@ body.is-offcanvas-open {
 
   h1 .accent {
     color: $color-gold;
-    display: block;
   }
 
   .lead {
@@ -2190,6 +2189,10 @@ body.is-offcanvas-open {
 
   .site-header .menu-toggle {
     display: none;
+  }
+
+  .home-hero {
+    padding: 8rem 0 8rem;
   }
 
   .home-metrics .grid {

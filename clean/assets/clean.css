@@ -133,7 +133,6 @@ i[data-lucide] svg {
 }
 .section-intro p {
   margin: 0.875rem auto 0;
-  max-width: 36rem;
   color: #64748b;
 }
 .section-intro.is-left {
@@ -744,6 +743,7 @@ body.is-offcanvas-open {
 .home-hero .container-narrow {
   position: relative;
   z-index: 1;
+  max-width: 50rem;
 }
 .home-hero h1 {
   margin: 0;
@@ -754,7 +754,6 @@ body.is-offcanvas-open {
 }
 .home-hero h1 .accent {
   color: #f48225;
-  display: block;
 }
 .home-hero .lead {
   margin: 1.5rem auto 0;
@@ -1885,6 +1884,9 @@ body.is-offcanvas-open {
   }
   .site-header .menu-toggle {
     display: none;
+  }
+  .home-hero {
+    padding: 8rem 0 8rem;
   }
   .home-metrics .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
