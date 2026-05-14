@@ -13,6 +13,7 @@
       content="náborový marketing,performance marketing,rekvizice pracovních nabídek,B2B marketing,Nabora"
     />
     <link rel="stylesheet" href="assets/clean.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
   <body>
     <div class="site-shell">
@@ -46,20 +47,12 @@
                 aria-controls="oborove-submenu"
               >
                 Oborové řešení
-                <svg
+                <i
                   class="chev"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  data-lucide="chevron-down"
+                  style="width: 12px; height: 12px"
                   aria-hidden="true"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
+                ></i>
               </button>
               <div
                 id="oborove-submenu"
@@ -70,56 +63,96 @@
                 <p class="submenu-kicker">Řešení podle oboru</p>
                 <div class="submenu-grid">
                   <a href="../it-vyvoj.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">{ }</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="code-2"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>IT &amp; Vývoj</strong>
                       <em>Vývojáři, analytici, DevOps…</em>
                     </span>
                   </a>
                   <a href="../finance-ucetnictvi.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">▦</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="chart-no-axes-column"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Finance &amp; Účetnictví</strong>
                       <em>Finanční ředitelé, účetní, kontroling…</em>
                     </span>
                   </a>
                   <a href="../logistika-doprava.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">⛟</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="truck"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Logistika &amp; Doprava</strong>
                       <em>Řidiči, dispečeři, skladníci…</em>
                     </span>
                   </a>
                   <a href="../vyroba-sklad.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">▣</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="warehouse"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Výroba &amp; Sklad</strong>
                       <em>Dělníci, mistři, technici…</em>
                     </span>
                   </a>
                   <a href="../management-c-level.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">▤</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="building-2"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Management &amp; C-level</strong>
                       <em>Ředitelé, CFO, COO, partneři…</em>
                     </span>
                   </a>
                   <a href="../zdravotnictvi.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">♥</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="heart"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Zdravotnictví</strong>
                       <em>Lékaři, sestry, laboranti…</em>
                     </span>
                   </a>
                   <a href="../stavebnictvi.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">⛑</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="hard-hat"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Stavebnictví</strong>
                       <em>Inženýři, projektanti, dělníci…</em>
                     </span>
                   </a>
                   <a href="../obchod-sales.html" role="menuitem">
-                    <span class="tile" aria-hidden="true">🤝</span>
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="handshake"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
                     <span>
                       <strong>Obchod &amp; Sales</strong>
                       <em>Obchodníci, account manažeři, BDR…</em>
@@ -143,9 +176,7 @@
             aria-expanded="false"
             aria-controls="offcanvas-menu"
           >
-            <span class="menu-toggle-bars" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </span>
+            <i data-lucide="menu" aria-hidden="true"></i>
           </button>
         </div>
       </header>
@@ -168,20 +199,11 @@
               aria-label="Zavřít menu"
               data-offcanvas-close
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              <i
+                data-lucide="x"
+                style="width: 20px; height: 20px"
                 aria-hidden="true"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
+              ></i>
             </button>
           </div>
           <nav class="offcanvas-nav" aria-label="Mobilní hlavní navigace">
@@ -194,46 +216,102 @@
                 aria-controls="offcanvas-oborove"
               >
                 Oborové řešení
-                <svg
+                <i
                   class="chev"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  data-lucide="chevron-down"
+                  style="width: 14px; height: 14px"
                   aria-hidden="true"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
+                ></i>
               </button>
               <div id="offcanvas-oborove" class="offcanvas-sub" hidden>
-                <a href="../it-vyvoj.html" data-offcanvas-close
-                  >IT &amp; Vývoj</a
-                >
-                <a href="../finance-ucetnictvi.html" data-offcanvas-close
-                  >Finance &amp; Účetnictví</a
-                >
-                <a href="../logistika-doprava.html" data-offcanvas-close
-                  >Logistika &amp; Doprava</a
-                >
-                <a href="../vyroba-sklad.html" data-offcanvas-close
-                  >Výroba &amp; Sklad</a
-                >
-                <a href="../management-c-level.html" data-offcanvas-close
-                  >Management &amp; C-level</a
-                >
-                <a href="../zdravotnictvi.html" data-offcanvas-close
-                  >Zdravotnictví</a
-                >
-                <a href="../stavebnictvi.html" data-offcanvas-close
-                  >Stavebnictví</a
-                >
-                <a href="../obchod-sales.html" data-offcanvas-close
-                  >Obchod &amp; Sales</a
-                >
+                <a href="../it-vyvoj.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="code-2"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>IT &amp; Vývoj</strong>
+                  </span>
+                </a>
+                <a href="../finance-ucetnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="chart-no-axes-column"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Finance &amp; Účetnictví</strong>
+                  </span>
+                </a>
+                <a href="../logistika-doprava.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="truck"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Logistika &amp; Doprava</strong>
+                  </span>
+                </a>
+                <a href="../vyroba-sklad.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="warehouse"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Výroba &amp; Sklad</strong>
+                  </span>
+                </a>
+                <a href="../management-c-level.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="building-2"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Management &amp; C-level</strong>
+                  </span>
+                </a>
+                <a href="../zdravotnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="heart"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Zdravotnictví</strong>
+                  </span>
+                </a>
+                <a href="../stavebnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="hard-hat"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Stavebnictví</strong>
+                  </span>
+                </a>
+                <a href="../obchod-sales.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="handshake"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Obchod &amp; Sales</strong>
+                  </span>
+                </a>
               </div>
             </div>
             <a href="#reference" data-offcanvas-close>Reference</a>
@@ -1344,6 +1422,11 @@
 
     <script>
       (function () {
+        // Init Lucide ikon
+        if (typeof lucide !== "undefined" && lucide.createIcons) {
+          lucide.createIcons();
+        }
+
         // Desktop submenu (Oborové řešení) — hover + klik/focus
         document
           .querySelectorAll(".site-header .has-sub")
@@ -1379,6 +1462,20 @@
         // Off-canvas mobilní menu
         var toggle = document.querySelector(".site-header .menu-toggle");
         var offcanvas = document.getElementById("offcanvas-menu");
+        var setToggleIcon = function (name) {
+          if (!toggle) return;
+          var icon =
+            toggle.querySelector("[data-lucide]") ||
+            toggle.querySelector("svg.lucide");
+          if (!icon) return;
+          var i = document.createElement("i");
+          i.setAttribute("data-lucide", name);
+          i.setAttribute("aria-hidden", "true");
+          icon.replaceWith(i);
+          if (typeof lucide !== "undefined" && lucide.createIcons) {
+            lucide.createIcons();
+          }
+        };
         if (toggle && offcanvas) {
           var openMenu = function () {
             offcanvas.hidden = false;
@@ -1386,6 +1483,7 @@
             toggle.setAttribute("aria-expanded", "true");
             toggle.setAttribute("aria-label", "Zavřít menu");
             document.body.classList.add("is-offcanvas-open");
+            setToggleIcon("x");
             // Spustí přechod v dalším framu
             requestAnimationFrame(function () {
               offcanvas.classList.add("is-open");
@@ -1397,6 +1495,7 @@
             toggle.setAttribute("aria-expanded", "false");
             toggle.setAttribute("aria-label", "Otevřít menu");
             document.body.classList.remove("is-offcanvas-open");
+            setToggleIcon("menu");
             setTimeout(function () {
               offcanvas.hidden = true;
             }, 200);
