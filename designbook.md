@@ -13,13 +13,13 @@ Designbook popisuje vizuální pravidla šablony Nabora.cz a slouží jako vodí
 
 ### Primární barvy
 
-| Název | Hodnota | Použití |
-| --- | --- | --- |
-| Navy | `#0B1D3A` | Nadpisy, patička, tmavé sekce, důležité texty |
-| Navy light | `#112B54` | Hover/sekundární tmavé plochy |
-| Gold / Orange | `#f48225` | Primární CTA, aktivní stavy, ikony, akcenty |
-| Gold hover | `#d6701f` | Hover pro CTA |
-| Gold light | `#f9a05c` | Jemné akcenty, hover v tmavém prostředí |
+| Název         | Hodnota   | Použití                                       |
+| ------------- | --------- | --------------------------------------------- |
+| Navy          | `#0B1D3A` | Nadpisy, patička, tmavé sekce, důležité texty |
+| Navy light    | `#112B54` | Hover/sekundární tmavé plochy                 |
+| Gold / Orange | `#f48225` | Primární CTA, aktivní stavy, ikony, akcenty   |
+| Gold hover    | `#d6701f` | Hover pro CTA                                 |
+| Gold light    | `#f9a05c` | Jemné akcenty, hover v tmavém prostředí       |
 
 ### Neutrální barvy
 
