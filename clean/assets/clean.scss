@@ -2174,6 +2174,16 @@ body.is-offcanvas-open {
     padding: 2.5rem 2.5rem 2.5rem 0;
   }
 
+  .home-callout .person img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: -5rem auto 1rem auto;
+    border: 6px solid rgb(27 127 204);
+    box-shadow: $shadow-emphasis;
+  }
+
   .home-faq .layout {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
     gap: 3rem;
