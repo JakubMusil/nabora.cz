@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IT & Vývoj — Nabora</title>
+    <meta
+      name="description"
+      content="Oborové řešení Nabora pro IT a vývojové firmy. Výkonnostní kampaně pro nábor relevantních kandidátů."
+    />
+    <link rel="preload" as="image" href="assets/operator.jpg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+      i[data-lucide] {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      i[data-lucide] svg,
+      svg.lucide {
+        display: inline-block !important;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body class="inter_6f63e4fe-module__BMM7va__variable antialiased font-sans">
+    <div class="min-h-screen flex flex-col bg-white">
+      <div class="hidden md:block bg-navy text-white">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-center gap-2 text-sm"
+        >
+          <span class="relative flex items-center gap-2"
+            ><span class="relative flex h-2.5 w-2.5"
+              ><span
+                class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+              ></span
+              ><span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"
+              ></span></span
+            ><b>Jsme právě na telefonu.</b></span
+          ><span class="text-white/80"
+            >Řešíte nábor IT specialistů? Probereme to hned teď na</span
+          ><a
+            href="tel:+420722722712"
+            class="font-semibold text-gold-bright hover:text-gold-light hover:underline transition-colors"
+            >+420 722 722 712</a
+          >
+        </div>
+      </div>
+      <header
+        class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100"
+      >
+        <nav
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+        >
+          <a href="index.html" class="flex items-center">
+            <img src="assets/logo.svg" alt="Nabora" class="h-10 w-auto" />
+          </a>
+          <div class="hidden md:flex items-center gap-1">
+            <div class="relative">
+              <button
+                class="flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-navy"
+              >
+                Služby<i
+                  data-lucide="chevron-down"
+                  class="transition-transform duration-200"
+                  style="width: 12px; height: 12px"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <div
+                class="sluzby-dropdown absolute top-full left-0 mt-1 w-72 bg-white rounded-xl border border-gray-100 shadow-lg shadow-black/5 py-2 z-50"
+                style="display: none"
+              >
+                <a
+                  href="#kontakt"
+                  class="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-150"
+                  ><div
+                    class="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 group-hover:bg-[#f48225] text-gray-700 group-hover:text-white transition-colors duration-150"
+                  >
+                    <i
+                      data-lucide="users-round"
+                      style="width: 20px; height: 20px"
+                    ></i>
+                  </div>
+                  <span
+                    class="text-sm font-medium text-gray-700 group-hover:text-navy transition-colors duration-150"
+                    >Reklamní kampaně náboru zaměstnanců pro firmy</span
+                  ></a
+                >
+              </div>
+            </div>
+            <div class="relative">
+              <button
+                class="flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-md transition-colors duration-200 text-navy bg-gray-50"
+              >
+                Oborové řešení<i
+                  data-lucide="chevron-down"
+                  class="transition-transform duration-200"
+                  style="width: 12px; height: 12px"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <div
+                class="oborove-dropdown absolute top-full left-0 mt-1 w-72 bg-white rounded-xl border border-gray-100 shadow-lg shadow-black/5 py-2 z-50"
+                style="display: none"
+              >
+                <a
+                  href="it-vyvoj.html"
+                  class="group flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-50"
+                  ><div
+                    class="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-lg bg-[#f48225] text-white"
+                  >
+                    <i
+                      data-lucide="code-2"
+                      style="width: 20px; height: 20px"
+                    ></i>
+                  </div>
+                  <span class="text-sm font-medium text-navy">IT &amp; Vývoj</span></a
+                >
+              </div>
+            </div>
+            <a
+              href="#vysledky"
+              class="text-sm font-medium text-gray-600 hover:text-navy hover:underline px-3 py-2 rounded-md transition-colors duration-200"
+              >Výsledky</a
+            ><a
+              href="#faq"
+              class="text-sm font-medium text-gray-600 hover:text-navy hover:underline px-3 py-2 rounded-md transition-colors duration-200"
+              >FAQ</a
+            ><a
+              href="#kontakt"
+              class="text-sm font-medium text-gray-600 hover:text-navy hover:underline px-3 py-2 rounded-md transition-colors duration-200"
+              >Kontakt</a
+            >
+          </div>
+          <a
+            href="#kontakt"
+            class="hidden md:inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-300"
+            >Pojďme to probrat</a
+          ><button class="md:hidden text-navy" aria-label="Menu">
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-1"
+          style="display: none"
+        >
+          <a
+            href="#kontakt"
+            class="mobile-link block py-2.5 text-sm font-medium text-gray-600 hover:text-navy hover:underline transition-colors"
+            >Reklamní kampaně náboru zaměstnanců pro firmy</a
+          >
+          <a
+            href="#vysledky"
+            class="mobile-link block py-2.5 text-sm font-medium text-gray-600 hover:text-navy hover:underline transition-colors"
+            >Výsledky</a
+          >
+          <a
+            href="#faq"
+            class="mobile-link block py-2.5 text-sm font-medium text-gray-600 hover:text-navy hover:underline transition-colors"
+            >FAQ</a
+          >
+          <a
+            href="#kontakt"
+            class="mobile-link block py-2.5 text-sm font-medium text-gray-600 hover:text-navy hover:underline transition-colors"
+            >Kontakt</a
+          >
+          <a
+            href="#kontakt"
+            class="mobile-link block mt-2 text-center bg-gold text-white font-semibold text-sm px-5 py-2.5 rounded-lg"
+            >Pojďme to probrat</a
+          >
+        </div>
+      </header>
+      <main class="flex-1">
+        <section class="bg-white">
+          <div
+            class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center"
+          >
+            <p class="text-sm font-semibold text-gold uppercase tracking-widest mb-3">
+              Oborové řešení / IT &amp; Vývoj
+            </p>
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight tracking-tight"
+            >
+              Najdeme IT kandidáty, kteří běžné inzeráty ignorují.
+            </h1>
+            <p
+              class="mt-6 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed"
+            >
+              Kampaně stavíme na datech, testování a správně zvolené komunikaci.
+              Oslovujeme aktivní i pasivní kandidáty napříč technologickými rolemi.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="#kontakt"
+                class="inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-base px-8 py-4 rounded-lg transition-all duration-300"
+                >Nezávazná konzultace<i
+                  data-lucide="arrow-right"
+                  style="width: 16px; height: 16px"
+                  aria-hidden="true"
+                ></i></a
+              ><a
+                href="#jak"
+                class="inline-flex items-center gap-2 border-2 border-navy/20 hover:border-navy text-navy font-medium text-base px-8 py-4 rounded-lg transition-all duration-300"
+                >Jak to funguje</a
+              >
+            </div>
+          </div>
+        </section>
+        <section id="jak" class="py-20 sm:py-24 bg-gray-bg">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
+                Co řešíme v IT náboru
+              </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+                <h3 class="text-lg font-bold text-navy">Nedostatek relevantních reakcí</h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Oslovujeme kandidáty podle stacku, seniority i lokality.
+                </p>
+              </article>
+              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+                <h3 class="text-lg font-bold text-navy">Dlouhý náborový cyklus</h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Optimalizujeme kampaně průběžně, aby se kvalitní reakce objevily co
+                  nejdříve.
+                </p>
+              </article>
+              <article class="bg-white border border-gray-100 rounded-2xl p-8">
+                <h3 class="text-lg font-bold text-navy">Rozpočet bez výkonu</h3>
+                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+                  Každý kanál vyhodnocujeme na kvalitu kandidátů, ne jen na proklik.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="vysledky" class="py-20 sm:py-24 bg-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
+                Co od kampaní čekat
+              </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+              <article class="bg-white rounded-2xl border border-gray-100 p-8 text-center">
+                <p class="text-4xl sm:text-5xl font-bold text-navy">-35 %</p>
+                <p class="mt-2 text-sm text-gray-500">Průměrné snížení ceny za relevantní reakci.</p>
+              </article>
+              <article class="bg-white rounded-2xl border border-gray-100 p-8 text-center">
+                <p class="text-4xl sm:text-5xl font-bold text-navy">2–4 týdny</p>
+                <p class="mt-2 text-sm text-gray-500">Na stabilní přísun kvalitních kandidátů.</p>
+              </article>
+              <article class="bg-white rounded-2xl border border-gray-100 p-8 text-center">
+                <p class="text-4xl sm:text-5xl font-bold text-navy">100 %</p>
+                <p class="mt-2 text-sm text-gray-500">Transparentní reporting výkonu i nákladů.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="faq" class="py-20 sm:py-24 bg-gray-bg">
+          <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
+                Časté otázky IT firem
+              </h2>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+                <button
+                  data-state="open"
+                  class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy"
+                >
+                  Jak rychle umíte kampaň spustit?
+                  <i data-lucide="chevron-down" style="width: 18px; height: 18px"></i>
+                </button>
+                <div class="px-6 pb-5" style="height: auto; overflow: visible">
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Obvykle do 5 pracovních dnů od dodání podkladů a schválení
+                    strategie.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="kontakt" class="py-20 sm:py-24 bg-white">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <p class="text-sm font-semibold text-gold uppercase tracking-widest mb-2">
+                  Začněme
+                </p>
+                <h2
+                  class="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight"
+                >
+                  Nechte si navrhnout strategii pro vaši pozici
+                </h2>
+                <p class="mt-4 text-gray-500 leading-relaxed">
+                  Vyplňte údaje a my se vám ozveme s nezávazným návrhem do 24 hodin.
+                  Probereme vaši cílovou skupinu, navrhneme vhodné kanály a připravíme
+                  odhad nákladů i očekávaných výsledků.
+                </p>
+              </div>
+              <form class="bg-gray-bg rounded-2xl border border-gray-100 shadow-sm p-8 space-y-5">
+                <div>
+                  <label class="block text-sm font-medium text-navy mb-1.5" for="email"
+                    >E-mail</label
+                  ><input
+                    type="email"
+                    data-slot="input"
+                    class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-11 bg-white"
+                    id="email"
+                    placeholder="vasa@firma.cz"
+                    required=""
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-navy mb-1.5" for="phone"
+                    >Telefon</label
+                  ><input
+                    type="tel"
+                    data-slot="input"
+                    class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-11 bg-white"
+                    id="phone"
+                    placeholder="+420 123 456 789"
+                  />
+                </div>
+                <button
+                  data-slot="button"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs px-4 py-2 has-[&gt;svg]:px-3 w-full h-12 bg-gold hover:bg-gold-hover text-white font-semibold text-base rounded-lg transition-all duration-300"
+                  type="submit"
+                >
+                  Získat nezávazný návrh
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-2xl overflow-visible"
+            style="
+              background: linear-gradient(135deg, #073256 0%, #185c95 100%);
+            "
+          >
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="px-8 sm:px-10 lg:px-12 py-10 sm:py-12">
+                <div class="flex items-center gap-2.5 mb-5">
+                  <span class="relative flex h-3 w-3"
+                    ><span
+                      class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+                    ></span
+                    ><span
+                      class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
+                    ></span></span
+                  ><span class="text-sm font-semibold text-green-400"
+                    >Jsme tu právě pro vás</span
+                  >
+                </div>
+                <h3
+                  class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-3"
+                >
+                  Zavolejte nám a nezávazně probereme vaše možnosti
+                </h3>
+                <p class="text-sm text-white/70 mb-8 max-w-md leading-relaxed">
+                  Máte otázky k našim službám nebo chcete probrat náborovou
+                  kampaň? Naši specialisté jsou připraveni vám pomoci.
+                </p>
+                <a
+                  href="tel:+420722722712"
+                  class="inline-flex items-center gap-3 group"
+                  ><span
+                    class="flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 group-hover:bg-gold transition-colors duration-300"
+                    ><i
+                      data-lucide="phone"
+                      class="text-white group-hover:text-white transition-colors"
+                      style="width: 22px; height: 22px"
+                      aria-hidden="true"
+                    ></i></span
+                  ><span
+                    class="text-3xl sm:text-4xl font-bold text-white group-hover:text-gold-bright transition-colors duration-300 tracking-tight"
+                    >+420 722 722 712</span
+                  ></a
+                >
+              </div>
+              <div
+                class="relative flex flex-col items-center justify-end px-8 pb-0 md:pr-10 lg:pr-12 -mt-16 md:-mt-24"
+              >
+                <div class="text-center mb-4">
+                  <img
+                    src="assets/operator.jpg"
+                    alt="Account manažerka"
+                    class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-white/20 shadow-xl mx-auto"
+                  />
+                </div>
+                <div class="text-center pb-8">
+                  <p class="text-base font-semibold text-white">
+                    Kateřina Nováková
+                  </p>
+                  <p class="text-sm text-white/80 mt-0.5 font-semibold">
+                    Vaše account manažerka
+                  </p>
+                  <p class="text-sm text-white/60 mt-1 italic">
+                    “Pomáhám firmám získávat lepší zaměstnance. Pomohu i vám.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="mt-auto py-12 sm:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="py-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="sm:col-span-2 lg:col-span-1">
+              <img src="assets/logo.svg" alt="Nabora" class="h-12 w-auto" />
+              <p class="mt-3 text-sm text-gray-700 leading-relaxed max-w-xs">
+                Výkonnostní marketingová agentura pro nábor. Doručujeme vaše
+                pracovní nabídky tam, kde kandidáti tráví čas.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-navy mb-4">Služby</h4>
+              <ul class="space-y-2.5">
+                <li>
+                  <a
+                    href="#kontakt"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >Reklamní kampaně náboru zaměstnanců pro firmy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kontakt"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >Reklamní kampaně pro HR agentury</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-navy mb-4">Navigace</h4>
+              <ul class="space-y-2.5">
+                <li>
+                  <a
+                    href="#jak"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >Jak to funguje</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#vysledky"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >Výsledky</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kontakt"
+                    class="text-sm text-gray-700 hover:text-gold hover:underline transition-colors duration-200"
+                    >Kontakt</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-navy mb-4">Kontakt</h4>
+              <ul class="space-y-2.5 text-sm text-gray-700">
+                <li>info@nabora.cz</li>
+                <li>+420 722 722 712</li>
+                <li>Praha, Česká republika</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div
+        id="mobile-sticky-bar"
+        class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between translate-y-full transition-transform duration-300"
+      >
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-2.5 w-2.5"
+            ><span
+              class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+            ></span
+            ><span
+              class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"
+            ></span></span
+          ><span class="text-sm font-semibold text-navy">Jsme na telefonu</span>
+        </div>
+        <a
+          href="tel:+420722722712"
+          class="inline-flex items-center gap-2 bg-gold hover:bg-gold-hover text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-300"
+          ><i
+            data-lucide="phone"
+            style="width: 16px; height: 16px"
+            aria-hidden="true"
+          ></i
+          >Volat hned</a
+        >
+      </div>
+    </div>
+    <script src="assets/scripts.js"></script>
+  </body>
+</html>
