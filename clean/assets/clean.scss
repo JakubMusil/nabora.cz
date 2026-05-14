@@ -133,6 +133,14 @@ button {
  * 3. Sdílené primitivy
  * --------------------------------------------------------------- */
 
+/* Kicker — malý nadpisek nad sekcemi. Pravidlo: nikdy nesmí mít
+ * horizontální margin, který by ho odsunul ze středu rodiče.
+ * Specifické sekce nastavují pouze `margin-bottom`. */
+.kicker {
+  margin: 0;
+  text-align: inherit;
+}
+
 /* Pravidelně se opakující intro sekce: malý kicker, h2, popis. */
 .section-intro {
   max-width: 42rem;
@@ -419,7 +427,308 @@ button {
     border: 1px solid $color-line;
     border-radius: 0.5rem;
     cursor: pointer;
+    padding: 0;
   }
+
+  .menu-toggle-bars {
+    position: relative;
+    display: inline-block;
+    width: 1.1rem;
+    height: 0.75rem;
+
+    span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: currentColor;
+      border-radius: 1px;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        top 0.2s ease;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+    }
+    span:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+    span:nth-child(3) {
+      top: calc(100% - 2px);
+    }
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-bars {
+    span:nth-child(1) {
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+  }
+
+  /* Desktop podmenu (Oborové řešení). */
+  nav.primary .has-sub {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    .sub-trigger .chev {
+      margin-left: 0.25rem;
+      transition: transform 0.2s ease;
+    }
+
+    &.is-open .sub-trigger .chev {
+      transform: rotate(180deg);
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 0.4rem;
+      width: min(40rem, 90vw);
+      padding: 1.25rem;
+      background: $color-white;
+      border: 1px solid $color-line;
+      border-radius: 0.875rem;
+      box-shadow: 0 20px 40px rgba(11, 29, 58, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.15s ease,
+        visibility 0.15s ease,
+        transform 0.15s ease;
+      z-index: 50;
+    }
+
+    &.is-open .submenu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .submenu-kicker {
+      margin: 0 0 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $color-muted-soft;
+    }
+
+    .submenu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+
+      a {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.6rem 0.75rem;
+        border-radius: 0.6rem;
+        color: $color-navy;
+        text-decoration: none;
+        transition: background 0.15s ease;
+
+        &:hover {
+          background: #f8fafc;
+          text-decoration: none;
+        }
+
+        .tile {
+          flex: 0 0 auto;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.25rem;
+          height: 2.25rem;
+          border-radius: 0.5rem;
+          background: #f1f5f9;
+          color: #475569;
+          font-size: 0.95rem;
+          transition:
+            background 0.15s ease,
+            color 0.15s ease;
+        }
+
+        &:hover .tile {
+          background: $color-gold;
+          color: $color-white;
+        }
+
+        strong {
+          display: block;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: $color-navy;
+        }
+
+        em {
+          display: block;
+          margin-top: 0.15rem;
+          font-style: normal;
+          font-size: 0.75rem;
+          color: $color-muted-soft;
+        }
+      }
+    }
+  }
+}
+
+/* Off-canvas mobilní menu, ovládané hamburgerem. */
+.offcanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  &[hidden] {
+    display: none;
+  }
+
+  .offcanvas-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 29, 58, 0.45);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &.is-open .offcanvas-backdrop {
+    opacity: 1;
+  }
+
+  .offcanvas-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(22rem, 88vw);
+    background: $color-white;
+    box-shadow: -16px 0 32px rgba(11, 29, 58, 0.18);
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.25rem 1.5rem;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.2s ease;
+    overflow-y: auto;
+  }
+
+  &.is-open .offcanvas-panel {
+    transform: translateX(0);
+  }
+
+  .offcanvas-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .offcanvas-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-muted-soft;
+  }
+
+  .offcanvas-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid $color-line;
+    background: transparent;
+    color: $color-navy;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .offcanvas-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+    > a,
+    .offcanvas-sub-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.7rem 0.5rem;
+      background: transparent;
+      border: 0;
+      border-radius: 0.5rem;
+      color: $color-navy;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+
+      &:hover {
+        background: #f8fafc;
+        text-decoration: none;
+      }
+    }
+
+    .offcanvas-sub-trigger .chev {
+      transition: transform 0.2s ease;
+    }
+
+    .offcanvas-sub-trigger[aria-expanded="true"] .chev {
+      transform: rotate(180deg);
+    }
+  }
+
+  .offcanvas-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.25rem 0 0.5rem 0.75rem;
+    border-left: 2px solid $color-line;
+    margin-left: 0.5rem;
+
+    &[hidden] {
+      display: none;
+    }
+
+    a {
+      display: block;
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.4rem;
+      color: #475569;
+      text-decoration: none;
+      font-size: 0.875rem;
+
+      &:hover {
+        background: #f8fafc;
+        color: $color-navy;
+      }
+    }
+  }
+
+  .offcanvas-cta {
+    margin-top: auto;
+    text-align: center;
+  }
+}
+
+body.is-offcanvas-open {
+  overflow: hidden;
 }
 
 /* ---------------------------------------------------------------
@@ -1563,7 +1872,14 @@ button {
     height: 3rem;
     border-radius: 0.75rem;
     background: rgba(255, 255, 255, 0.1);
-    transition: background $transition-hover;
+    color: $color-white;
+    transition:
+      background $transition-hover,
+      color $transition-hover;
+
+    svg {
+      display: block;
+    }
   }
 
   .phone:hover .icon-circle {
