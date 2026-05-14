@@ -22,10 +22,12 @@
         display: inline-block !important;
         vertical-align: middle;
       }
-      @media (min-width: 640px) {
+      @media (min-width: 640px) and (max-width: 1023px) {
         .it-roles-cta {
           grid-column: span 2 / span 2;
-          grid-row: span 2 / span 2;
+        }
+        .it-roles-last-art {
+          grid-column: span 2 / span 2;
         }
       }
       @media (min-width: 1024px) {
@@ -380,7 +382,7 @@
                 </p>
               </article>
               <article
-                class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                class="it-roles-last-art group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
               >
                 <h3
                   class="text-base font-bold text-navy group-hover:text-gold transition-colors duration-300"
