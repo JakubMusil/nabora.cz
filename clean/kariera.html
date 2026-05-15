@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kariéra — Nabora (Clean šablona)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Volné pozice v Naboře — výkonnostní marketing, copywriting, account management a design. Pojďte stavět kampaně, které hýbou náborovým trhem."
+    />
+    <meta
+      name="keywords"
+      content="Nabora kariéra,volné pozice,práce v marketingu,nábor marketing"
+    />
+    <link rel="preload" as="image" href="assets/operator.jpg" />
+    <link rel="stylesheet" href="assets/clean.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <!-- Top bar s telefonním kontaktem -->
+      <div class="topbar">
+        <div class="container">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <strong>Jsme právě na telefonu.</strong>
+          <span class="muted"
+            >Řešíte nábor IT specialistů? Probereme to hned teď na</span
+          >
+          <a href="tel:+420722722712">+420 722 722 712</a>
+        </div>
+      </div>
+
+      <!-- Hlavní hlavička s navigací -->
+      <header class="site-header">
+        <div class="container">
+          <a class="brand" href="index.html" aria-label="Nabora domů">
+            <img src="assets/logo.svg" alt="Nabora" />
+          </a>
+          <nav class="primary" aria-label="Hlavní navigace">
+            <a href="index.html#sluzby">Služby</a>
+            <div class="has-sub">
+              <button
+                type="button"
+                class="sub-trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="oborove-submenu"
+              >
+                Oborové řešení
+                <i
+                  class="chev"
+                  data-lucide="chevron-down"
+                  style="width: 12px; height: 12px"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <div
+                id="oborove-submenu"
+                class="submenu"
+                role="menu"
+                aria-label="Řešení podle oboru"
+              >
+                <p class="submenu-kicker">Řešení podle oboru</p>
+                <div class="submenu-grid">
+                  <a href="it-vyvoj.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="code-2"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>IT &amp; Vývoj</strong>
+                      <em>Vývojáři, analytici, DevOps…</em>
+                    </span>
+                  </a>
+                  <a href="finance-ucetnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="chart-no-axes-column"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Finance &amp; Účetnictví</strong>
+                      <em>Finanční ředitelé, účetní, kontroling…</em>
+                    </span>
+                  </a>
+                  <a href="logistika-doprava.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="truck"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Logistika &amp; Doprava</strong>
+                      <em>Řidiči, dispečeři, skladníci…</em>
+                    </span>
+                  </a>
+                  <a href="vyroba-sklad.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="warehouse"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Výroba &amp; Sklad</strong>
+                      <em>Dělníci, mistři, technici…</em>
+                    </span>
+                  </a>
+                  <a href="management-c-level.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="building-2"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Management &amp; C-level</strong>
+                      <em>Ředitelé, CFO, COO, partneři…</em>
+                    </span>
+                  </a>
+                  <a href="zdravotnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="heart"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Zdravotnictví</strong>
+                      <em>Lékaři, sestry, laboranti…</em>
+                    </span>
+                  </a>
+                  <a href="stavebnictvi.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="hard-hat"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Stavebnictví</strong>
+                      <em>Inženýři, projektanti, dělníci…</em>
+                    </span>
+                  </a>
+                  <a href="obchod-sales.html" role="menuitem">
+                    <span class="tile" aria-hidden="true">
+                      <i
+                        data-lucide="handshake"
+                        style="width: 20px; height: 20px"
+                      ></i>
+                    </span>
+                    <span>
+                      <strong>Obchod &amp; Sales</strong>
+                      <em>Obchodníci, account manažeři, BDR…</em>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#vysledky">Výsledky</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+          </nav>
+          <a class="button-primary header-cta" href="#kontakt"
+            >Pojďme to probrat</a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Otevřít menu"
+            aria-expanded="false"
+            aria-controls="offcanvas-menu"
+          >
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Off-canvas mobilní menu, ovládané hamburgerem v hlavičce -->
+      <div
+        id="offcanvas-menu"
+        class="offcanvas"
+        hidden
+        aria-hidden="true"
+        aria-label="Mobilní navigace"
+      >
+        <div class="offcanvas-backdrop" data-offcanvas-close></div>
+        <div class="offcanvas-panel" role="dialog" aria-modal="true">
+          <div class="offcanvas-head">
+            <span class="offcanvas-title">Menu</span>
+            <button
+              type="button"
+              class="offcanvas-close"
+              aria-label="Zavřít menu"
+              data-offcanvas-close
+            >
+              <i
+                data-lucide="x"
+                style="width: 20px; height: 20px"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
+          <nav class="offcanvas-nav" aria-label="Mobilní hlavní navigace">
+            <a href="index.html#sluzby" data-offcanvas-close>Služby</a>
+            <div class="offcanvas-group">
+              <button
+                type="button"
+                class="offcanvas-sub-trigger"
+                aria-expanded="false"
+                aria-controls="offcanvas-oborove"
+              >
+                Oborové řešení
+                <i
+                  class="chev"
+                  data-lucide="chevron-down"
+                  style="width: 14px; height: 14px"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <div id="offcanvas-oborove" class="offcanvas-sub" hidden>
+                <a href="it-vyvoj.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="code-2"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>IT &amp; Vývoj</strong>
+                  </span>
+                </a>
+                <a href="finance-ucetnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="chart-no-axes-column"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Finance &amp; Účetnictví</strong>
+                  </span>
+                </a>
+                <a href="logistika-doprava.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="truck"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Logistika &amp; Doprava</strong>
+                  </span>
+                </a>
+                <a href="vyroba-sklad.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="warehouse"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Výroba &amp; Sklad</strong>
+                  </span>
+                </a>
+                <a href="management-c-level.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="building-2"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Management &amp; C-level</strong>
+                  </span>
+                </a>
+                <a href="zdravotnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="heart"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Zdravotnictví</strong>
+                  </span>
+                </a>
+                <a href="stavebnictvi.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="hard-hat"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Stavebnictví</strong>
+                  </span>
+                </a>
+                <a href="obchod-sales.html" data-offcanvas-close>
+                  <span class="tile" aria-hidden="true">
+                    <i
+                      data-lucide="handshake"
+                      style="width: 16px; height: 16px"
+                    ></i>
+                  </span>
+                  <span>
+                    <strong>Obchod &amp; Sales</strong>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a href="#vysledky" data-offcanvas-close>Výsledky</a>
+            <a href="index.html#faq" data-offcanvas-close>FAQ</a>
+            <a href="#kontakt" data-offcanvas-close>Kontakt</a>
+          </nav>
+          <a
+            class="button-primary offcanvas-cta"
+            href="#kontakt"
+            data-offcanvas-close
+            >Pojďme to probrat</a
+          >
+        </div>
+      </div>
+
+      <main>
+        <!-- Hero — kariéra v Naboře -->
+        <section class="home-hero">
+          <span class="hero-line" aria-hidden="true"></span>
+          <span class="hero-dot is-top" aria-hidden="true"></span>
+          <span class="hero-dot is-bottom" aria-hidden="true"></span>
+          <div class="container-narrow">
+            <p class="kicker">Kariéra v Naboře</p>
+            <h1>
+              Pojďte stavět kampaně,
+              <span class="accent">které hýbou náborovým trhem.</span>
+            </h1>
+            <p class="lead">
+              Pomáháme firmám získávat lepší lidi a sami stavíme tým, kterého si
+              vážíme. Hledáme kolegy do výkonnostního marketingu, copywritingu i
+              account managementu — podívejte se na otevřené pozice.
+            </p>
+            <div class="actions">
+              <a class="button-primary" href="#pozice">Volné pozice →</a>
+              <a class="button-outline-navy" href="#kontakt"
+                >Poslat životopis</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Proč u nás — tři kartičky -->
+        <section class="home-steps" id="jak">
+          <div class="container">
+            <div class="section-intro">
+              <p class="kicker">Proč Nabora</p>
+              <h2>Co u nás dostanete</h2>
+              <p>
+                Stavíme prostředí, kde jde výkon ruku v ruce s respektem k
+                vašemu času. Žádné mikromanagement schůzky, žádné prázdné
+                reporty.
+              </p>
+            </div>
+            <div class="grid">
+              <article class="step">
+                <span class="icon-tile" aria-hidden="true">
+                  <i data-lucide="rocket" style="width: 20px; height: 20px"></i>
+                </span>
+                <h3>Smysluplnou práci</h3>
+                <p>
+                  Pracujete na reálných kampaních, které firmám obsazují pozice.
+                  Výsledek vaší práce vidíte v reportech každý týden.
+                </p>
+              </article>
+              <article class="step">
+                <span class="icon-tile" aria-hidden="true">
+                  <i
+                    data-lucide="calendar-clock"
+                    style="width: 20px; height: 20px"
+                  ></i>
+                </span>
+                <h3>Flexibilní režim</h3>
+                <p>
+                  Home office, kancelář v Praze nebo kombinace — nastavíme to
+                  podle role. Hlavní je domluvený výstup, ne čas u stolu.
+                </p>
+              </article>
+              <article class="step">
+                <span class="icon-tile" aria-hidden="true">
+                  <i
+                    data-lucide="graduation-cap"
+                    style="width: 20px; height: 20px"
+                  ></i>
+                </span>
+                <h3>Růst v oboru</h3>
+                <p>
+                  Konference, kurzy, certifikace platforem i interní sdílení
+                  zkušeností. Investujeme do toho, abyste byli pořád o krok
+                  napřed.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Volné pozice + CTA panel -->
+        <section class="it-roles" id="pozice">
+          <div class="container">
+            <div class="section-intro">
+              <p class="kicker">Volné pozice u nás</p>
+              <h2>Aktuálně hledáme</h2>
+              <p>
+                Pokud vás zaujme některá z rolí, napište nám pár vět o sobě a
+                přiložte CV nebo LinkedIn. Ozveme se vám obvykle do 48 hodin.
+              </p>
+            </div>
+            <div class="layout">
+              <div class="role-grid">
+                <article class="role">
+                  <h3>Performance marketing specialista</h3>
+                  <p>
+                    Vedete kampaně na Meta, Google a LinkedIn. Optimalizujete
+                    cílení, rozpočty a kreativy podle dat. Praha / hybridně.
+                  </p>
+                </article>
+                <article class="role">
+                  <h3>Copywriter pro nábor</h3>
+                  <p>
+                    Píšete inzeráty a reklamní texty, které kandidáta přesvědčí
+                    reagovat. Hledáte argumenty, které firmu odlišují.
+                  </p>
+                </article>
+                <article class="role">
+                  <h3>Account manažer / manažerka</h3>
+                  <p>
+                    Vedete vztah s klienty, sbíráte podklady k pozicím a hlídáte
+                    kvalitu reakcí. Komunikujete s HR i hiring manažery.
+                  </p>
+                </article>
+                <article class="role">
+                  <h3>Designer kampaní</h3>
+                  <p>
+                    Tvoříte vizuální podoby reklamních formátů — bannery, video,
+                    statika i landing pages — vždy s ohledem na výkon.
+                  </p>
+                </article>
+                <article class="role is-wide">
+                  <h3>Junior performance specialista</h3>
+                  <p>
+                    Hledáme i juniora, kterého rádi zaučíme. Pokud máte cit pro
+                    data a chuť učit se reklamní platformy, ozvěte se nám.
+                  </p>
+                </article>
+              </div>
+              <aside class="role-cta">
+                <p class="kicker">Neváhejte se ozvat</p>
+                <h3>Nenašli jste svou roli? Napište nám stejně.</h3>
+                <p>
+                  Pokud cítíte, že byste do týmu zapadli, ozvěte se i bez
+                  vypsané pozice. Rádi si poslechneme, co umíte a co hledáte.
+                </p>
+                <ul>
+                  <li>Reakce do 48 hodin</li>
+                  <li>Krátké úvodní volání bez závazku</li>
+                  <li>Férová zpětná vazba i v případě nezájmu</li>
+                </ul>
+                <a class="button-primary" href="#kontakt">Poslat životopis →</a>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Co od nás čekat — 3 metriky -->
+        <section class="home-results" id="vysledky">
+          <div class="container">
+            <div class="section-intro">
+              <p class="kicker">Pracovní rytmus</p>
+              <h2>Co u nás čekat</h2>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <p>2 dny</p>
+                <p>
+                  Průměrná reakce na zaslané CV — i v případě, že nepokračujeme
+                  dál.
+                </p>
+              </div>
+              <div class="metric">
+                <p>1 týden</p>
+                <p>
+                  Délka výběrového řízení od prvního volání po nabídku — bez
+                  zbytečných kol.
+                </p>
+              </div>
+              <div class="metric">
+                <p>100 %</p>
+                <p>
+                  Transparentní podmínky, mzda i benefity ještě před podpisem
+                  smlouvy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kontaktní formulář pro uchazeče -->
+        <section class="home-contact" id="kontakt">
+          <div class="container-mid">
+            <div class="layout">
+              <div class="intro">
+                <p class="kicker">Pošlete životopis</p>
+                <h2>Ozvěte se nám — rádi vás poznáme</h2>
+                <p>
+                  Nechte nám e-mail a telefon, ideálně připište, o jakou roli
+                  máte zájem. Ozveme se vám obvykle do 48 hodin.
+                </p>
+                <ul class="perks">
+                  <li>Reakce do 48 hodin</li>
+                  <li>Krátké úvodní volání</li>
+                  <li>Férová zpětná vazba i při nezájmu</li>
+                </ul>
+              </div>
+              <form>
+                <div>
+                  <label for="email">E-mail</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="vase@email.cz"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone">Telefon</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+420 123 456 789"
+                    autocomplete="tel"
+                  />
+                </div>
+                <button type="submit">Poslat životopis</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Banner s account manažerkou -->
+        <section class="home-callout">
+          <div class="container">
+            <div class="banner">
+              <div class="layout">
+                <div class="text">
+                  <span class="status-row">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Jsme tu právě pro vás
+                  </span>
+                  <h3>Raději si zavoláme? Žádný problém.</h3>
+                  <p>
+                    Pokud chcete o pozici probrat detaily nebo se jen nezávazně
+                    zeptat, vezměte si telefon. Domluvíme se rychle.
+                  </p>
+                  <a class="phone" href="tel:+420722722712">
+                    <span class="icon-circle" aria-hidden="true">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="number">+420 722 722 712</span>
+                  </a>
+                </div>
+                <div class="person">
+                  <img
+                    src="assets/operator.jpg"
+                    alt="Account manažerka Kateřina Nováková"
+                  />
+                  <p class="name">Kateřina Nováková</p>
+                  <p class="role">Vaše kontaktní osoba pro kariéru</p>
+                  <p class="quote">
+                    „Stavíme tým, kterého si vážíme. Pojďte se přidat.“
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Patička -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="columns">
+            <div class="brand">
+              <img class="logo" src="assets/logo.svg" alt="Nabora" />
+              <p>
+                Výkonnostní marketingová agentura pro nábor. Doručujeme vaše
+                pracovní nabídky tam, kde kandidáti tráví čas.
+              </p>
+            </div>
+
+            <div class="links">
+              <section>
+                <h4>Služby</h4>
+                <ul>
+                  <li>
+                    <a href="#kontakt"
+                      >Reklamní kampaně náboru zaměstnanců pro firmy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#kontakt">Reklamní kampaně pro HR agentury</a>
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h4>Navigace</h4>
+                <ul>
+                  <li><a href="#jak">Jak to funguje</a></li>
+                  <li><a href="#vysledky">Výsledky</a></li>
+                  <li><a href="index.html#faq">FAQ</a></li>
+                  <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h4>Kontakt</h4>
+                <ul class="contact-list">
+                  <li>info@nabora.cz</li>
+                  <li>+420 722 722 712</li>
+                  <li>Praha, Česká republika</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span>© 2026 Nabora. Všechna práva vyhrazena.</span>
+            <nav aria-label="Právní informace">
+              <a href="#">Ochrana osobních údajů</a>
+              <a href="#">Obchodní podmínky</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Plovoucí mobilní telefonní lišta -->
+      <div class="mobile-call-bar" aria-label="Rychlé volání">
+        <span class="label">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Jsme na telefonu
+        </span>
+        <a href="tel:+420722722712">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+          Volat hned
+        </a>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // Init Lucide ikon
+        if (typeof lucide !== "undefined" && lucide.createIcons) {
+          lucide.createIcons();
+        }
+
+        // Desktop submenu (Oborové řešení) — hover + klik/focus
+        document
+          .querySelectorAll(".site-header .has-sub")
+          .forEach(function (wrap) {
+            var trigger = wrap.querySelector(".sub-trigger");
+            if (!trigger) return;
+            var open = function () {
+              wrap.classList.add("is-open");
+              trigger.setAttribute("aria-expanded", "true");
+            };
+            var close = function () {
+              wrap.classList.remove("is-open");
+              trigger.setAttribute("aria-expanded", "false");
+            };
+            wrap.addEventListener("mouseenter", open);
+            wrap.addEventListener("mouseleave", close);
+            trigger.addEventListener("click", function (e) {
+              e.preventDefault();
+              if (wrap.classList.contains("is-open")) {
+                close();
+              } else {
+                open();
+              }
+            });
+            document.addEventListener("click", function (e) {
+              if (!wrap.contains(e.target)) close();
+            });
+            document.addEventListener("keydown", function (e) {
+              if (e.key === "Escape") close();
+            });
+          });
+
+        // Off-canvas mobilní menu
+        var toggle = document.querySelector(".site-header .menu-toggle");
+        var offcanvas = document.getElementById("offcanvas-menu");
+        var setToggleIcon = function (name) {
+          if (!toggle) return;
+          var icon =
+            toggle.querySelector("[data-lucide]") ||
+            toggle.querySelector("svg.lucide");
+          if (!icon) return;
+          var i = document.createElement("i");
+          i.setAttribute("data-lucide", name);
+          i.setAttribute("aria-hidden", "true");
+          icon.replaceWith(i);
+          if (typeof lucide !== "undefined" && lucide.createIcons) {
+            lucide.createIcons();
+          }
+        };
+        if (toggle && offcanvas) {
+          var openMenu = function () {
+            offcanvas.hidden = false;
+            offcanvas.setAttribute("aria-hidden", "false");
+            toggle.setAttribute("aria-expanded", "true");
+            toggle.setAttribute("aria-label", "Zavřít menu");
+            document.body.classList.add("is-offcanvas-open");
+            setToggleIcon("x");
+            // Spustí přechod v dalším framu
+            requestAnimationFrame(function () {
+              offcanvas.classList.add("is-open");
+            });
+          };
+          var closeMenu = function () {
+            offcanvas.classList.remove("is-open");
+            offcanvas.setAttribute("aria-hidden", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Otevřít menu");
+            document.body.classList.remove("is-offcanvas-open");
+            setToggleIcon("menu");
+            setTimeout(function () {
+              offcanvas.hidden = true;
+            }, 200);
+          };
+          toggle.addEventListener("click", function () {
+            if (toggle.getAttribute("aria-expanded") === "true") {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          });
+          offcanvas
+            .querySelectorAll("[data-offcanvas-close]")
+            .forEach(function (el) {
+              el.addEventListener("click", closeMenu);
+            });
+          document.addEventListener("keydown", function (e) {
+            if (
+              e.key === "Escape" &&
+              toggle.getAttribute("aria-expanded") === "true"
+            ) {
+              closeMenu();
+            }
+          });
+
+          // Vnořené rozbalovací skupiny v off-canvas (Oborové řešení)
+          offcanvas
+            .querySelectorAll(".offcanvas-sub-trigger")
+            .forEach(function (btn) {
+              var targetId = btn.getAttribute("aria-controls");
+              var panel = targetId ? document.getElementById(targetId) : null;
+              if (!panel) return;
+              btn.addEventListener("click", function () {
+                var expanded = btn.getAttribute("aria-expanded") === "true";
+                btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+                panel.hidden = expanded;
+              });
+            });
+        }
+      })();
+    </script>
+  </body>
+</html>
