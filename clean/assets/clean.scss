@@ -2218,6 +2218,81 @@ body.is-offcanvas-open {
   }
 }
 
+/* 5.16 Minimalistický detail článku — typografická čtená stránka. */
+.article-detail {
+  padding: 4rem 0 5rem;
+
+  .article-back {
+    margin: 0 0 1.5rem;
+    font-size: 0.875rem;
+
+    a {
+      color: $color-muted;
+      text-decoration: none;
+      transition: color $transition-hover;
+    }
+
+    a:hover {
+      color: $color-gold;
+    }
+  }
+
+  .kicker {
+    margin: 0 0 0.75rem;
+  }
+
+  h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    line-height: 1.15;
+    color: $color-navy;
+
+    .accent {
+      color: $color-gold;
+    }
+  }
+
+  .article-meta {
+    margin: 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.8125rem;
+    color: $color-muted-soft;
+  }
+
+  .lead {
+    margin: 0 0 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: $color-muted;
+  }
+
+  .article-body {
+    h2 {
+      margin: 2.5rem 0 0.85rem;
+      font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+      color: $color-navy;
+    }
+
+    p {
+      margin: 0 0 1.1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: $color-text;
+    }
+
+    em {
+      color: $color-text-strong;
+      font-style: italic;
+    }
+  }
+
+  .article-cta {
+    margin: 3rem 0 0;
+  }
+}
+
 /* ---------------------------------------------------------------
  * 6. Patička
  * --------------------------------------------------------------- */
