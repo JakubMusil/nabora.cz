@@ -151,7 +151,7 @@ Každý soubor v `clean/` zachovává stejnou kostru:
 
 ### 3.6 Odkazy a navigace
 
-- Telefonní odkazy v jednotném formátu `tel:+420722722712`.
+- Telefonní odkazy v jednotném formátu `tel:+420720500733`.
 - Vnitřní kotvy: `#sluzby`, `#oborove`, `#cenik`, `#vysledky`, `#faq`, `#kontakt`,
   `#jak`, `#role`.
 - Mezi-stránkové odkazy v rámci `clean/`: relativní (`it-vyvoj.html`,
