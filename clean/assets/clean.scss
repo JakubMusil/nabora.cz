@@ -2293,6 +2293,742 @@ body.is-offcanvas-open {
   }
 }
 
+/* 5.17 Článková typografie a bloky — sada znovupoužitelných bloků,
+ * které se vkládají přímo do toku `.article-body`. Pravidla jsou
+ * scoped pod `.article-detail`, aby nezasahovaly do jiných sekcí. */
+
+.article-detail .article-body > * + *:not(p):not(h2):not(h3):not(em) {
+  margin-top: 2.25rem;
+}
+
+/* 1. Související obsah */
+.article-related {
+  margin: 2.25rem 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: 14px;
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $color-muted;
+
+    i[data-lucide],
+    svg.lucide {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.0625rem;
+    line-height: 1.35;
+    color: $color-navy;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  li a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: $color-navy;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    transition: color $transition-hover;
+
+    &:hover {
+      color: $color-gold;
+    }
+
+    .arrow {
+      color: $color-gold;
+      font-weight: 700;
+    }
+  }
+
+  li em {
+    display: block;
+    margin-top: 0.15rem;
+    color: $color-muted;
+    font-style: normal;
+    font-size: 0.8125rem;
+  }
+
+  &--case-study {
+    border-left: 4px solid $color-gold;
+    background: $color-white;
+
+    .kicker {
+      color: $color-gold;
+    }
+  }
+
+  &--service {
+    background: $color-navy;
+    border-color: $color-navy;
+
+    .kicker {
+      color: $color-gold-soft;
+    }
+    h3,
+    li a {
+      color: $color-white;
+    }
+    li em {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    li a:hover {
+      color: $color-gold-soft;
+    }
+  }
+}
+
+/* 2. Pull-quote / vytržený citát */
+.article-pullquote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  border-left: 4px solid $color-gold;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.45;
+  color: $color-navy;
+
+  cite {
+    display: block;
+    margin-top: 0.65rem;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-muted;
+
+    &::before {
+      content: "— ";
+    }
+  }
+}
+
+/* 3. Highlight / TL;DR callout */
+.article-callout {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem 1rem;
+  align-items: start;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid $color-border;
+  border-left-width: 4px;
+  border-radius: 12px;
+  background: $color-bg;
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: $color-white;
+    color: $color-navy;
+    border: 1px solid $color-border;
+    flex-shrink: 0;
+
+    i[data-lucide],
+    svg.lucide {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: $color-navy;
+    font-size: 0.9375rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: $color-text;
+  }
+
+  &--info {
+    border-left-color: $color-navy-bright;
+    background: rgba(24, 92, 149, 0.06);
+
+    .icon {
+      color: $color-navy-bright;
+      border-color: rgba(24, 92, 149, 0.2);
+    }
+  }
+
+  &--tip {
+    border-left-color: $color-gold;
+    background: rgba(244, 130, 37, 0.08);
+
+    .icon {
+      color: $color-gold;
+      border-color: rgba(244, 130, 37, 0.25);
+    }
+  }
+
+  &--warning {
+    border-left-color: $color-star;
+    background: rgba(251, 188, 5, 0.1);
+
+    .icon {
+      color: #b07a00;
+      border-color: rgba(176, 122, 0, 0.25);
+    }
+  }
+}
+
+/* 4. Vychýlené obrázky (float, bleed) */
+.article-figure {
+  margin: 2.25rem 0;
+
+  img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: $shadow-card;
+  }
+
+  figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: $color-muted-soft;
+    text-align: left;
+
+    .source {
+      color: $color-muted;
+      font-style: italic;
+    }
+  }
+}
+
+/* 5. Tabulka */
+.article-table {
+  margin: 2.25rem 0;
+  overflow-x: auto;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  background: $color-white;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  caption {
+    caption-side: top;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: $color-muted;
+    border-bottom: 1px solid $color-border;
+    background: $color-bg;
+
+    .label {
+      color: $color-gold;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-right: 0.5rem;
+    }
+  }
+
+  thead th {
+    padding: 0.75rem 1rem;
+    background: $color-navy;
+    color: $color-white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  tbody td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid $color-line;
+    color: $color-text;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) td {
+    background: $color-bg;
+  }
+
+  td.num,
+  th.num {
+    font-variant-numeric: tabular-nums;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+      monospace;
+    text-align: right;
+  }
+}
+
+/* 6. Klíčové statistiky */
+.article-stats {
+  margin: 2.25rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  .stat {
+    padding: 1.25rem 1.25rem 1.1rem;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 14px;
+    box-shadow: $shadow-card;
+
+    .value {
+      display: block;
+      font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: $color-gold;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .label {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.8125rem;
+      line-height: 1.4;
+      color: $color-muted;
+    }
+  }
+}
+
+/* 7. Strukturovaný seznam kroků / checklist */
+.article-steps {
+  margin: 2.25rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: article-step;
+  display: grid;
+  gap: 1rem;
+
+  > li {
+    counter-increment: article-step;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.85rem 1rem;
+    align-items: start;
+    padding: 1rem 1.25rem;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 12px;
+
+    &::before {
+      content: counter(article-step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 999px;
+      background: $color-gold-tint;
+      color: $color-gold;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      flex-shrink: 0;
+    }
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: $color-navy;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: $color-text;
+  }
+}
+
+.article-checklist {
+  margin: 2.25rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+
+  > li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    padding: 0.5rem 0;
+    color: $color-text;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-top: 0.2rem;
+      border-radius: 999px;
+      background: $color-success
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>")
+        center / 12px no-repeat;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* 8. Shrnutí / klíčové body */
+.article-summary {
+  margin: 2.25rem 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: $color-navy;
+  color: $color-white;
+  border-radius: 16px;
+  box-shadow: $shadow-emphasis;
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-gold-soft;
+  }
+
+  h3 {
+    margin: 0 0 1rem;
+    font-size: 1.125rem;
+    color: $color-white;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.55rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.88);
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      margin-top: 0.6rem;
+      border-radius: 999px;
+      background: $color-gold;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* 9. Zdroje / reference (mimo article-body) */
+.article-sources {
+  margin: 3.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid $color-border;
+
+  h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 1rem;
+    font-size: 1.0625rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-navy;
+
+    i[data-lucide],
+    svg.lucide {
+      width: 18px;
+      height: 18px;
+      color: $color-gold;
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: $color-muted;
+    counter-reset: src;
+    list-style: none;
+
+    > li {
+      position: relative;
+      padding: 0.65rem 0;
+      border-top: 1px solid $color-line;
+      counter-increment: src;
+      scroll-margin-top: 6rem;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      &::before {
+        content: "[" counter(src) "]";
+        position: absolute;
+        left: -1.75rem;
+        top: 0.65rem;
+        font-variant-numeric: tabular-nums;
+        color: $color-gold;
+        font-weight: 700;
+      }
+
+      &:target {
+        background: rgba(244, 130, 37, 0.08);
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .author {
+    color: $color-text;
+    font-weight: 600;
+  }
+
+  .title {
+    font-style: italic;
+    color: $color-text;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: $color-navy-bright;
+    text-decoration: none;
+    word-break: break-word;
+    transition: color $transition-hover;
+
+    &:hover {
+      color: $color-gold;
+      text-decoration: underline;
+    }
+
+    i[data-lucide],
+    svg.lucide {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+/* Citace v textu */
+.article-body {
+  sup a,
+  .ref-link {
+    text-decoration: none;
+    color: $color-gold;
+    font-weight: 600;
+    padding: 0 0.1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* 10. Související články (grid pod článkem) */
+.article-related-grid {
+  margin: 3.5rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid $color-border;
+
+  .kicker {
+    margin: 0 0 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition:
+      box-shadow $transition-hover,
+      transform $transition-hover;
+
+    &:hover {
+      box-shadow: $shadow-card-hover;
+      transform: translateY(-2px);
+    }
+
+    .tag-pill {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: $color-gold-tint;
+      color: $color-gold;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0 0 0.65rem;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: $color-navy;
+    }
+
+    .meta {
+      margin: 0 0 0.85rem;
+      font-size: 0.75rem;
+      color: $color-muted-soft;
+    }
+
+    .read-more {
+      margin-top: auto;
+      color: $color-gold;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+/* Desktop ladění */
+@media (min-width: 720px) {
+  .article-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .stat.is-wide {
+      grid-column: span 2;
+    }
+  }
+
+  .article-related-grid .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .article-figure--float-right,
+  .article-figure--float-left {
+    max-width: 22rem;
+  }
+  .article-figure--float-right {
+    float: right;
+    margin: 0.4rem -8rem 1.25rem 1.75rem;
+    clear: right;
+  }
+  .article-figure--float-left {
+    float: left;
+    margin: 0.4rem 1.75rem 1.25rem -8rem;
+    clear: left;
+  }
+  .article-figure--bleed {
+    margin-left: -6rem;
+    margin-right: -6rem;
+  }
+
+  .article-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    .stat.is-wide {
+      grid-column: span 2;
+    }
+  }
+
+  .article-related-grid .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Po vychýlených obrázcích nesmí h2 přitéct do floatu. */
+.article-body h2 {
+  clear: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-related li a,
+  .article-sources a,
+  .article-related-grid .post-card {
+    transition: none;
+  }
+  .article-related-grid .post-card:hover {
+    transform: none;
+  }
+}
+
+@media print {
+  .article-detail .article-cta,
+  .article-related--service,
+  .article-related-grid {
+    display: none;
+  }
+  .article-figure--float-right,
+  .article-figure--float-left,
+  .article-figure--bleed {
+    float: none;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+  .article-sources {
+    page-break-inside: avoid;
+  }
+}
+
 /* ---------------------------------------------------------------
  * 6. Patička
  * --------------------------------------------------------------- */
