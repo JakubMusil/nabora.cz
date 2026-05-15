@@ -2527,6 +2527,17 @@ body.is-offcanvas-open {
   }
 }
 
+.article-figure--center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 36rem;
+  text-align: center;
+
+  figcaption {
+    text-align: center;
+  }
+}
+
 /* 5. Tabulka */
 .article-table {
   margin: 2.25rem 0;
@@ -2718,7 +2729,8 @@ body.is-offcanvas-open {
   border-radius: 16px;
   box-shadow: $shadow-emphasis;
 
-  .kicker {
+  .kicker,
+  p.kicker {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -2727,7 +2739,13 @@ body.is-offcanvas-open {
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: $color-gold-soft;
+    color: $color-gold;
+
+    i[data-lucide],
+    svg.lucide {
+      color: $color-gold;
+      stroke: currentColor;
+    }
   }
 
   h3 {
