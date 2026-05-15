@@ -745,6 +745,14 @@ body.is-offcanvas-open {
   z-index: 1;
   max-width: 50rem;
 }
+.home-hero .kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f48225;
+}
 .home-hero h1 {
   margin: 0;
   font-size: clamp(1.9rem, 5vw, 3.6rem);
@@ -1358,6 +1366,189 @@ body.is-offcanvas-open {
   line-height: 1.55;
 }
 
+/* 5.11a Sekce "Typické IT pozice" — oborový list + tmavý CTA panel. */
+.it-roles {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+.it-roles .layout {
+  display: grid;
+  gap: 2rem;
+  align-items: stretch;
+}
+.it-roles .role-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.it-roles .role {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+.it-roles .role:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+.it-roles .role h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0b1d3a;
+  transition: color 0.3s ease;
+}
+.it-roles .role:hover h3 {
+  color: #f48225;
+}
+.it-roles .role p {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+.it-roles .role-cta {
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  background: linear-gradient(135deg, #0b1d3a 0%, #0f3460 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 16px 32px rgba(11, 29, 58, 0.2);
+}
+.it-roles .role-cta .kicker {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f9a05c;
+}
+.it-roles .role-cta h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+  line-height: 1.25;
+  color: #ffffff;
+}
+.it-roles .role-cta > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9375rem;
+}
+.it-roles .role-cta ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+.it-roles .role-cta ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.875rem;
+}
+.it-roles .role-cta ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f48225;
+  font-weight: 700;
+}
+.it-roles .role-cta .button-primary {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* 5.11b Sekce "Průběžný sběr uchazečů" — text + měřítka pro IT pipeline. */
+.it-pipeline {
+  padding: 5rem 0;
+  background: #f7f9fa;
+}
+.it-pipeline .card {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+.it-pipeline .text .kicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f48225;
+}
+.it-pipeline .text h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+  color: #0b1d3a;
+}
+.it-pipeline .text > p {
+  margin: 1rem 0 0;
+  color: #64748b;
+}
+.it-pipeline .callout {
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(244, 130, 37, 0.3);
+  background: rgba(244, 130, 37, 0.12);
+  border-radius: 1.25rem;
+}
+.it-pipeline .callout .icon-tile {
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: #f48225;
+  color: #ffffff;
+}
+.it-pipeline .callout .callout-title {
+  margin: 0;
+  font-weight: 700;
+  color: #0b1d3a;
+}
+.it-pipeline .callout p:last-child {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+.it-pipeline .stats {
+  display: grid;
+  gap: 1.25rem;
+}
+.it-pipeline .stat {
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9;
+  background: #f7f9fa;
+  padding: 1.75rem;
+}
+.it-pipeline .stat-value {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 700;
+  color: #0b1d3a;
+  letter-spacing: -0.01em;
+}
+.it-pipeline .stat p:last-child {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
 /* 5.12 Sekce FAQ + video. */
 .home-faq {
   padding: 5rem 0;
@@ -1856,6 +2047,18 @@ body.is-offcanvas-open {
   .home-industries .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .it-roles .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .it-roles .role.is-wide {
+    grid-column: span 2;
+  }
+  .it-pipeline .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .it-pipeline .stats .is-wide {
+    grid-column: span 2;
+  }
   .home-logos .grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1904,6 +2107,15 @@ body.is-offcanvas-open {
   }
   .home-industries .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .it-pipeline .card {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 4rem;
+    padding: 3rem;
+  }
+  .it-roles .layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: stretch;
   }
   .home-logos .grid {
     grid-template-columns: repeat(7, minmax(0, 1fr));

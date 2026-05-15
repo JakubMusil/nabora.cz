@@ -850,6 +850,15 @@ body.is-offcanvas-open {
     max-width: 50rem;
   }
 
+  .kicker {
+    margin: 0 0 0.85rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+
   h1 {
     margin: 0;
     font-size: clamp(1.9rem, 5vw, 3.6rem);
@@ -1576,6 +1585,216 @@ body.is-offcanvas-open {
   }
 }
 
+/* 5.11a Sekce "Typické IT pozice" — oborový list + tmavý CTA panel. */
+.it-roles {
+  padding: 5rem 0;
+  background: $color-white;
+
+  .layout {
+    display: grid;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .role-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .role {
+    background: $color-white;
+    border: 1px solid $color-line;
+    border-radius: $radius-2xl;
+    padding: 2rem;
+    box-shadow: $shadow-card;
+    transition:
+      transform $transition-hover,
+      box-shadow $transition-hover,
+      color $transition-hover;
+  }
+
+  .role:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card-hover;
+  }
+
+  .role h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: $color-navy;
+    transition: color $transition-hover;
+  }
+
+  .role:hover h3 {
+    color: $color-gold;
+  }
+
+  .role p {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+    color: $color-muted;
+    line-height: 1.55;
+  }
+
+  .role-cta {
+    border-radius: $radius-2xl;
+    padding: 2.25rem;
+    background: linear-gradient(135deg, $color-navy 0%, $color-navy-soft 100%);
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: $shadow-emphasis;
+  }
+
+  .role-cta .kicker {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-gold-soft;
+  }
+
+  .role-cta h3 {
+    margin: 0;
+    font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+    line-height: 1.25;
+    color: $color-white;
+  }
+
+  .role-cta > p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.9375rem;
+  }
+
+  .role-cta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .role-cta ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.875rem;
+  }
+
+  .role-cta ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $color-gold;
+    font-weight: 700;
+  }
+
+  .role-cta .button-primary {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}
+
+/* 5.11b Sekce "Průběžný sběr uchazečů" — text + měřítka pro IT pipeline. */
+.it-pipeline {
+  padding: 5rem 0;
+  background: $color-bg;
+
+  .card {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    background: $color-white;
+    border: 1px solid $color-line;
+    border-radius: $radius-2xl;
+    padding: 2.5rem;
+    box-shadow: $shadow-card;
+  }
+
+  .text .kicker {
+    margin: 0 0 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+
+  .text h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.2;
+    color: $color-navy;
+  }
+
+  .text > p {
+    margin: 1rem 0 0;
+    color: $color-muted;
+  }
+
+  .callout {
+    margin-top: 1.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(244, 130, 37, 0.3);
+    background: $color-gold-tint;
+    border-radius: $radius-xl;
+  }
+
+  .callout .icon-tile {
+    flex: 0 0 auto;
+    width: 2.75rem;
+    height: 2.75rem;
+    background: $color-gold;
+    color: $color-white;
+  }
+
+  .callout .callout-title {
+    margin: 0;
+    font-weight: 700;
+    color: $color-navy;
+  }
+
+  .callout p:last-child {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+
+  .stats {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .stat {
+    border-radius: $radius-2xl;
+    border: 1px solid $color-line;
+    background: $color-bg;
+    padding: 1.75rem;
+  }
+
+  .stat-value {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    font-weight: 700;
+    color: $color-navy;
+    letter-spacing: -0.01em;
+  }
+
+  .stat p:last-child {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+    color: $color-muted;
+    line-height: 1.55;
+  }
+}
+
 /* 5.12 Sekce FAQ + video. */
 .home-faq {
   padding: 5rem 0;
@@ -2153,6 +2372,22 @@ body.is-offcanvas-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .it-roles .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .it-roles .role.is-wide {
+    grid-column: span 2;
+  }
+
+  .it-pipeline .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .it-pipeline .stats .is-wide {
+    grid-column: span 2;
+  }
+
   .home-logos .grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -2213,6 +2448,17 @@ body.is-offcanvas-open {
 
   .home-industries .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .it-pipeline .card {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 4rem;
+    padding: 3rem;
+  }
+
+  .it-roles .layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: stretch;
   }
 
   .home-logos .grid {
