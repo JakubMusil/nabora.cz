@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interní Dokumentace | Nabora.cz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../clean/assets/clean.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+      .docs-main { padding: 80px 0; background: #fafafa; min-height: 100vh; }
+      .docs-header-text { margin-bottom: 3rem; text-align: center; }
+      .docs-header-text h1 { font-size: 2.5rem; color: #1e1e1e; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 800; }
+      .docs-header-text p { font-size: 1.1rem; color: #6b7280; max-width: 600px; margin: 0 auto; }
+      
+      .docs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+      .doc-card { 
+        background: #fff; 
+        padding: 2rem; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+        border: 1px solid #f3f4f6;
+      }
+      .doc-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-color: #e5e7eb; }
+      .doc-card .icon { color: #2563eb; margin-bottom: 1rem; }
+      .doc-card h3 { font-size: 1.25rem; color: #111827; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+      .doc-card p { font-size: 0.95rem; color: #6b7280; margin: 0; line-height: 1.5; }
+      
+      .section-title { font-size: 1.5rem; color: #0d284a; margin: 3rem 0 1.5rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <!-- Hlavička dokumentace -->
+      <header class="site-header" style="border-bottom: 1px solid #e5e7eb; background: white;">
+        <div class="container">
+          <a class="brand" href="../clean/index.html" aria-label="Nabora domů">
+            <img src="../clean/assets/logo.svg" alt="Nabora" onerror="this.src='https://nabora.cz/assets/logo.svg'" />
+          </a>
+          <nav class="primary" aria-label="Hlavní navigace">
+            <a href="index.html"><strong>Interní Dokumentace</strong></a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <div class="container-mid">
+          
+          <div class="docs-header-text">
+            <h1>Interní Dokumentace (Wiki)</h1>
+            <p>Vítej v Nabora Wiki. Zde najdeš veškeré procesy, návody, onbordingové manuály a firemní pravidla hezky pohromadě.</p>
+          </div>
+
+          <h2 class="section-title">Obchod & Projektový management</h2>
+          <div class="docs-grid">
+            <a href="onboarding_sales.html" class="doc-card">
+              <div class="icon"><i data-lucide="phone-call" style="width: 32px; height: 32px"></i></div>
+              <h3>Onboarding Obchodníka</h3>
+              <p>Procesy B2B akvizice, skripty na cold-calls, práce s CRM a vedení discovery schůzek.</p>
+            </a>
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="file-text" style="width: 32px; height: 32px"></i></div>
+              <h3>Šablony E-mailů & Nabídek</h3>
+              <p>Zásobník předpřipravených šablon (Cold email, follow-up, cenová nabídka).</p>
+            </a>
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="database" style="width: 32px; height: 32px"></i></div>
+              <h3>Práce s CRM systémem</h3>
+              <p>Jak správně evidovat leady, udržovat čistotu v pipeline a nastavení automatizací.</p>
+            </a>
+          </div>
+
+          <h2 class="section-title">Marketing & Realizace</h2>
+          <div class="docs-grid">
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="facebook" style="width: 32px; height: 32px"></i></div>
+              <h3>Nastavení Meta Kampaní</h3>
+              <p>Standardizovaný postup nastavování kampaní pro výrobní a skladové pozice.</p>
+            </a>
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="linkedin" style="width: 32px; height: 32px"></i></div>
+              <h3>LinkedIn Ads pro B2B</h3>
+              <p>Strategie pro management a IT pozice, definování úzkého publika, InMail kampaně.</p>
+            </a>
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="pen-tool" style="width: 32px; height: 32px"></i></div>
+              <h3>Copywriting inzerátů</h3>
+              <p>Jak psát texty, které kandidáti nepřescrollují. Pravidla pro Hook, Body a CTA.</p>
+            </a>
+          </div>
+
+          <h2 class="section-title">O firmě</h2>
+          <div class="docs-grid">
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="book-open" style="width: 32px; height: 32px"></i></div>
+              <h3>Firemní kultura & Hodnoty</h3>
+              <p>Vize projektu Nabora.cz, co nás odlišuje a jak komunikujeme s klienty i mezi sebou.</p>
+            </a>
+            <a href="#" class="doc-card" style="opacity: 0.7;">
+              <div class="icon"><i data-lucide="shield-check" style="width: 32px; height: 32px"></i></div>
+              <h3>GDPR a Bezpečnost Dat</h3>
+              <p>Práce s osobními údaji kandidátů, předávání životopisů a naše povinnosti.</p>
+            </a>
+          </div>
+
+        </div>
+      </main>
+      
+      <!-- Patička -->
+      <footer style="background: #0d284a; color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+          <p style="opacity: 0.7; font-size: 0.9rem;">&copy; 2026 Nabora.cz — Interní dokumentace</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
