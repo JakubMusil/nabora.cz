@@ -18,7 +18,25 @@
       .alert-box { background: #fff1f2; border-left: 6px solid #e11d48; padding: 1.5rem; border-radius: 4px; margin: 2rem 0;}
       .alert-box h4 { margin-top: 0; color: #9f1239; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;}
       .alert-box p { margin: 0; color: #881337;}
-    </style>
+    
+      .docs-layout { display: flex; gap: 2.5rem; align-items: flex-start; margin-top: 1rem; }
+      .docs-sidebar { flex: 0 0 260px; position: sticky; top: 100px; padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); max-height: calc(100vh - 120px); overflow-y: auto; border: 1px solid #f3f4f6;}
+      .docs-sidebar::-webkit-scrollbar { width: 4px; }
+      .docs-sidebar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+      .docs-article { flex: 1; min-width: 0; margin-top: 0 !important; }
+      .toc ul { list-style: none; padding: 0; margin: 0; }
+      .toc-h2 { margin-top: 0.75rem; font-weight: 600; font-size: 0.9rem; line-height: 1.4; border-left: 2px solid transparent; padding-left: 8px;}
+      .toc-h2:hover { border-left-color: #2563eb;}
+      .toc-h3 { margin-top: 0.35rem; font-size: 0.85rem; padding-left: 1.5rem; color: #6b7280; line-height: 1.3; }
+      .toc a { text-decoration: none; color: inherit; display: block; padding: 0.25rem 0; transition: color 0.2s;}
+      .toc a:hover { color: #2563eb; }
+      .toc-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 1rem; font-weight: 700; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;}
+      
+      @media (max-width: 900px) {
+        .docs-layout { flex-direction: column; }
+        .docs-sidebar { position: static; width: 100%; flex: auto; max-height: none; margin-bottom: 2rem; }
+      }
+</style>
   </head>
   <body>
     <div class="site-shell">
@@ -35,7 +53,13 @@
             <a href="index.html">Infobáze</a> <span>/</span> GDPR a Bezpečnost Dat
           </div>
 
-          <article class="docs-article">
+          
+          <div class="docs-layout">
+            <aside class="docs-sidebar">
+              <div class="toc-title">Na této stránce</div>
+              <nav class="toc" id="toc"></nav>
+            </aside>
+<article class="docs-article">
             <h1>GDPR a Bezpečnost Dat</h1>
             <p>Jako HR marketingová agentura denně zpracováváme životopisy (CV), e-maily a telefony uchazečů. Správné zacházení s těmito citlivými údaji je kritické. Sebemenší únik dat nebo jejich nelegální prodej může firmu stát nejen pokutu od ÚOOÚ (Úřad pro ochranu osobních údajů), ale i okamžitou ztrátu dobrého jména a všech klientů.</p>
 
@@ -62,9 +86,36 @@
             <p>V každém formuláři, který nastavujeme (ať už na Facebook Lead Ads nebo na cílové Landing page), musí být přítomen odkaz na Prohlášení o zpracování osobních údajů klienta a nezbytný check-box: <em>"Souhlasím se zpracováním osobních údajů pro účely výběrového řízení."</em> Před spuštěním kampaně je obchodník i markeťák povinen zkontrolovat, že tento checkbox u formuláře fyzicky existuje.</p>
 
           </article>
+          </div>
+
         </div>
       </main>
-      <script>lucide.createIcons();</script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const article = document.querySelector('.docs-article');
+          if (!article) return;
+          const headings = article.querySelectorAll('h2, h3');
+          const toc = document.getElementById('toc');
+          if (!toc || headings.length === 0) return;
+          
+          const ul = document.createElement('ul');
+          headings.forEach(h => {
+            if (!h.id) {
+              h.id = h.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+            }
+            const li = document.createElement('li');
+            li.className = 'toc-' + h.tagName.toLowerCase();
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.innerText = h.innerText;
+            li.appendChild(a);
+            ul.appendChild(li);
+          });
+          toc.appendChild(ul);
+        });
+      </script>
+<script>lucide.createIcons();</script>
     </div>
   </body>
 </html>

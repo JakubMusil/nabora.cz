@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meta Ads pro Nábor | Nabora.cz Infobáze</title>
+    <title>Evidence v Google Tabulkách | Nabora.cz Infobáze</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../clean/assets/clean.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -15,7 +15,12 @@
       .docs-article p, .docs-article li { font-size: 1.1rem; line-height: 1.7; color: #4b5563; font-family: 'Inter', sans-serif; }
       .breadcrumb { margin-bottom: 2rem; font-size: 0.95rem; }
       .breadcrumb a { color: #2563eb; text-decoration: none; }
-      .strategy-box { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;}
+      .rule-box { background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;}
+      .table-example { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.95rem;}
+      .table-example th, .table-example td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: left; }
+      .table-example th { background-color: #f1f5f9; font-weight: bold; color: #0f172a;}
+      .table-example td.status-new { background-color: #dbeafe; color: #1e40af;}
+      .table-example td.status-contacted { background-color: #fef3c7; color: #b45309;}
     
       .docs-layout { display: flex; gap: 2.5rem; align-items: flex-start; margin-top: 1rem; }
       .docs-sidebar { flex: 0 0 260px; position: sticky; top: 100px; padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); max-height: calc(100vh - 120px); overflow-y: auto; border: 1px solid #f3f4f6;}
@@ -48,7 +53,7 @@
       <main class="docs-main">
         <div class="container-narrow">
           <div class="breadcrumb">
-            <a href="index.html">Infobáze</a> <span>/</span> Nastavení Meta Kampaní
+            <a href="index.html">Infobáze</a> <span>/</span> Evidence v Google Tabulkách
           </div>
 
           
@@ -58,42 +63,65 @@
               <nav class="toc" id="toc"></nav>
             </aside>
 <article class="docs-article">
-            <h1>Nastavení Meta Kampaní (Facebook & Instagram)</h1>
-            <p>Meta platforma je náš hlavní kanál pro obsazování pozic typu "Modré límečky" (výroba, logistika, gastro, retail) a nižší management. Tento dokument popisuje standardizovaný postup pro zakládání náborových kampaní.</p>
+            <h1>Evidence v Google Tabulkách (Sales Tracker)</h1>
+            <p>Zatímco Nabora roste, nepoužíváme těžkopádné a drahé CRM systémy. Vystačíme si s maximálně efektivním sdíleným Excelem (Google Sheets). Tato tabulka je ovšem svatá – je to jediný zdroj pravdy o tvé práci, o tvých provizích a o stavu našich klientů.</p>
 
-            <div class="strategy-box">
-              <h3 style="margin-top: 0; color: #166534;">Základní filozofie</h3>
-              <p style="color: #15803d; margin-bottom: 0;">Pasivní kandidáti nebudou číst 5 odstavců textu. Klíčem na Metě je <strong>vizuál, který zastaví scroll (Hook)</strong>, a okamžitě srozumitelný hlavní benefit (např. Nástupní bonus 20 000 Kč, Pouze ranní směny, Nástup ihned).</p>
+            <div class="rule-box">
+              <h3 style="margin-top: 0; color: #b45309;"><i data-lucide="alert-triangle"></i> Zlaté pravidlo tabulky</h3>
+              <p style="color: #92400e;"><strong>Pokud to není v tabulce, neexistuje to.</strong> Nespoléhej se na paměť nebo poznámky v telefonu. Pokud lead nemá vyplněné datum "Další krok", navždy jsi ho ztratil a připravil ses o peníze.</p>
             </div>
 
-            <h2>1. Volba účelu kampaně (Campaign Objective)</h2>
-            <p>Na Metě vždy volíme účel <strong>Leads (Potenciální zákazníci)</strong>. Nechceme jen prokliky na web (Traffic), chceme, aby algoritmus hledal lidi, kteří reálně vyplní formulář.</p>
+            <h2>1. Architektura Sales Trackeru</h2>
+            <p>Tabulka má jasně dané sloupce. Musíš je všechny poctivě vyplňovat, abys měl ty i zakladatelé přehled nad pipeline.</p>
+            
+            <table class="table-example">
+              <thead>
+                <tr>
+                  <th>Firma</th>
+                  <th>Zdroj</th>
+                  <th>Hledaná pozice</th>
+                  <th>Kontakt</th>
+                  <th>Status</th>
+                  <th>Další krok (Kdy)</th>
+                  <th>Poznámka</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Logistika Novák s.r.o.</td>
+                  <td>Jobs.cz</td>
+                  <td>Řidič C+E</td>
+                  <td>Jan Novák (CEO) - 777123456</td>
+                  <td class="status-new">1. Nový Lead</td>
+                  <td><strong>Dnes</strong> (Cold Call)</td>
+                  <td>Inzerát topován 14 dnů, hoří jim to.</td>
+                </tr>
+                <tr>
+                  <td>TechCorp a.s.</td>
+                  <td>LinkedIn</td>
+                  <td>Senior Java Dev</td>
+                  <td>Petra Malá (HR) - petra@...</td>
+                  <td class="status-contacted">3. Sjednána schůzka</td>
+                  <td><strong>24.5. 14:00</strong> (Call)</td>
+                  <td>Platí 30% headhunterovi, mají budget na změnu.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>2. Statusy (Stages)</h2>
+            <p>Ve sloupci Status máme rozbalovací menu (Data Validation). Každý lead musí mít přiřazen aktuální stav:</p>
             <ul>
-              <li><strong>Instant Forms (Formuláře na FB):</strong> Ideální pro dělnické a nižší pozice. Rychlé, bez bariér (nevyžadujeme nahrání CV, stačí jméno a telefon).</li>
-              <li><strong>Konverze na webu:</strong> Ideální pro pozice, kde potřebujeme, aby si kandidát přečetl detaily o firmě a nahrál PDF životopis. Vyžaduje funkční Meta Pixel na kariérním webu klienta.</li>
+              <li><strong>1. Nový Lead:</strong> Zapsal sis ho, ale ještě jsi nevolal.</li>
+              <li><strong>2. Nedovolal jsem se:</strong> Zkusil jsi to, nikdo to nebral. Nutné nastavit <em>Další krok</em> na zítřek!</li>
+              <li><strong>3. Kontaktováno (Follow-up):</strong> Mluvili jste, klient si vyžádal poslat mail nebo zavolat za týden.</li>
+              <li><strong>4. Schůzka sjednána:</strong> Přislíben online meeting (Discovery call).</li>
+              <li><strong>5. Nabídka odeslána:</strong> Vyjednáváte o ceně a strategii.</li>
+              <li><strong>6. WON (Výhra):</strong> Smlouva je podepsána, předáváš projekt do výroby. Gratulujeme k provizi!</li>
+              <li><strong>7. LOST (Ztráta):</strong> Odmítli nás. Nezapomeň do poznámky uvést proč (cena, nechuť k soc. sítím, atd.). Nastav Další krok za 3 měsíce pro znovuoslovení.</li>
             </ul>
 
-            <h2>2. Cílení a Publika (Targeting)</h2>
-            <p>Díky novým pravidlům (Special Ad Categories) Meta značně omezila detailní cílení pro nabídky práce. Zde je náš workaround:</p>
-            <ul>
-              <li><strong>Geografie:</strong> Cílíme vždy na okruh 20–40 km od místa výkonu práce (dle dojezdové vzdálenosti a oboru).</li>
-              <li><strong>Broad cílení:</strong> Pro masové pozice (skladník, operátor) necháváme cílení naprosto široké (Broad). Algoritmus na základě vizuálu a prvních reakcí pochopí, komu má inzerát ukazovat.</li>
-              <li><strong>Zájmy:</strong> Přidáváme pouze obecné zájmy související s oborem (např. pro truhláře "Zpracování dřeva", "Dílna", "Kutilství").</li>
-              <li><strong>Retargeting:</strong> Velmi důležité! Vytváříme publikum z lidí, kteří rozklikli náš formulář, ale neodeslali ho. Na tyto lidi pouštíme "připomínací" reklamu.</li>
-            </ul>
-
-            <h2>3. Struktura a Kreativa</h2>
-            <p>Testujeme minimálně 3 různé vizuály (A/B testing):</p>
-            <ol>
-              <li><strong>Realistická fotka z provozu:</strong> Usměvavý zaměstnanec (žádná fotobanka!), text přímo ve fotce ("Hledáme operátory CNC do Liberce").</li>
-              <li><strong>Video / Reels:</strong> Krátké video na mobil od mistra nebo HR manažera (krátká ukázka čistého prostředí, benefity, přímá výzva k akci).</li>
-              <li><strong>Benefitní infografika:</strong> Jednoduchá grafika vypichující mzdu a benefity.</li>
-            </ol>
-            <p>Nepoužíváme nudné korporátní obrázky s logy uprostřed. Reklama musí působit nativně.</p>
-
-            <h2>4. Rozpočet a Optimalizace</h2>
-            <p>Minimální doporučený denní rozpočet pro jednu pozici v jednom regionu je 400 - 600 Kč. Pod touto částkou se algoritmus nestihne dostat z fáze učení (Learning phase). Po 3-4 dnech kampaně kontrolujeme cenu za Lead (CPL) a vypínáme nefungující kreativy.</p>
-
+            <h2>3. Barevné kódování (Conditional Formatting)</h2>
+            <p>Tabulka sama podbarvuje řádky. Červená znamená, že <em>Další krok</em> propadl (datum je v minulosti). Tvá priorita číslo 1 každé ráno je vyčistit červené řádky a posunout je dopředu. Zelená barva znamená podepsaný deal.</p>
           </article>
           </div>
 

@@ -20,7 +20,25 @@
       .value-card .icon { background: #e0e7ff; color: #4f46e5; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;}
       .value-card h4 { font-size: 1.25rem; color: #0f172a; margin-top: 0; margin-bottom: 1rem;}
       .value-card p { font-size: 0.95rem; margin-bottom: 0;}
-    </style>
+    
+      .docs-layout { display: flex; gap: 2.5rem; align-items: flex-start; margin-top: 1rem; }
+      .docs-sidebar { flex: 0 0 260px; position: sticky; top: 100px; padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); max-height: calc(100vh - 120px); overflow-y: auto; border: 1px solid #f3f4f6;}
+      .docs-sidebar::-webkit-scrollbar { width: 4px; }
+      .docs-sidebar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+      .docs-article { flex: 1; min-width: 0; margin-top: 0 !important; }
+      .toc ul { list-style: none; padding: 0; margin: 0; }
+      .toc-h2 { margin-top: 0.75rem; font-weight: 600; font-size: 0.9rem; line-height: 1.4; border-left: 2px solid transparent; padding-left: 8px;}
+      .toc-h2:hover { border-left-color: #2563eb;}
+      .toc-h3 { margin-top: 0.35rem; font-size: 0.85rem; padding-left: 1.5rem; color: #6b7280; line-height: 1.3; }
+      .toc a { text-decoration: none; color: inherit; display: block; padding: 0.25rem 0; transition: color 0.2s;}
+      .toc a:hover { color: #2563eb; }
+      .toc-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 1rem; font-weight: 700; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;}
+      
+      @media (max-width: 900px) {
+        .docs-layout { flex-direction: column; }
+        .docs-sidebar { position: static; width: 100%; flex: auto; max-height: none; margin-bottom: 2rem; }
+      }
+</style>
   </head>
   <body>
     <div class="site-shell">
@@ -37,7 +55,13 @@
             <a href="index.html">Infobáze</a> <span>/</span> Firemní kultura & Hodnoty
           </div>
 
-          <article class="docs-article">
+          
+          <div class="docs-layout">
+            <aside class="docs-sidebar">
+              <div class="toc-title">Na této stránce</div>
+              <nav class="toc" id="toc"></nav>
+            </aside>
+<article class="docs-article">
             <h1>Firemní kultura a Hodnoty Nabora.cz</h1>
             <p>V Nabora.cz jsme startupem nejen srdcem, ale i mentalitou. Netvoříme zbytečné procesy tam, kde postačí selský rozum. Cílem Nabora.cz je být jedničkou na trhu v HR performance marketingu, a k tomu potřebujeme lidi, kteří nesou osobní zodpovědnost a nebojí se inovovat.</p>
 
@@ -71,9 +95,36 @@
             <p>Hodnotíme výsledky, ne počet hodin prosezených na židli v kanceláři. Nabízíme plnou flexibilitu a možnost pracovat odkudkoliv (Remote-first). Pokud si splníš svá KPI (vytočené hovory, sjednané schůzky), nikoho nezajímá, jestli jsi pracoval z Brna nebo z Bali. Očekáváme však dostupnost pro klienty v běžné pracovní hodiny v ČR a silné a stabilní internetové připojení pro videohovory.</p>
 
           </article>
+          </div>
+
         </div>
       </main>
-      <script>lucide.createIcons();</script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const article = document.querySelector('.docs-article');
+          if (!article) return;
+          const headings = article.querySelectorAll('h2, h3');
+          const toc = document.getElementById('toc');
+          if (!toc || headings.length === 0) return;
+          
+          const ul = document.createElement('ul');
+          headings.forEach(h => {
+            if (!h.id) {
+              h.id = h.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+            }
+            const li = document.createElement('li');
+            li.className = 'toc-' + h.tagName.toLowerCase();
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.innerText = h.innerText;
+            li.appendChild(a);
+            ul.appendChild(li);
+          });
+          toc.appendChild(ul);
+        });
+      </script>
+<script>lucide.createIcons();</script>
     </div>
   </body>
 </html>
