@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Onboarding Manuál: Sales & Projektový management | Nabora.cz Docs</title>
+    <title>Komplexní Onboarding: Sales & Projektový management | Nabora.cz Docs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,24 +16,40 @@
       .docs-main { padding: 80px 0; background: #fafafa; min-height: 100vh; }
       .docs-article { background: #fff; padding: 60px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
       .docs-article h1 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #1e1e1e; font-family: 'Inter', sans-serif; font-weight: 800; }
-      .docs-article h2 { font-size: 1.75rem; margin-top: 3rem; margin-bottom: 1rem; color: #0d284a; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
-      .docs-article h3 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1e1e1e; }
+      .docs-article h2 { font-size: 1.75rem; margin-top: 3.5rem; margin-bottom: 1.25rem; color: #0d284a; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+      .docs-article h3 { font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1e1e1e; font-weight: 700;}
+      .docs-article h4 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #374151; font-weight: 600;}
       .docs-article p, .docs-article li { font-size: 1.1rem; line-height: 1.7; color: #4b5563; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
       .docs-article ul, .docs-article ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
       .docs-article li { margin-bottom: 0.5rem; }
       .docs-article strong { color: #111827; }
-      .docs-article .script-box { background: #f3f4f6; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 4px; margin: 1.5rem 0; }
-      .docs-article .script-box p { font-style: italic; color: #374151; margin-bottom: 0; }
+      
+      .script-box { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+      .script-box p { font-style: italic; color: #334155; margin-bottom: 0; }
+      
+      .objection-box { background: #fff1f2; border: 1px solid #fecdd3; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+      .objection-box h4 { color: #be123c; margin-top: 0; display: flex; align-items: center; gap: 8px;}
+      .objection-box p { color: #881337; margin-bottom: 0; }
+      
+      .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+      .tool-card { padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; }
+      .tool-card h4 { margin-top: 0; color: #111827; display: flex; align-items: center; gap: 8px;}
+      .tool-card p { font-size: 0.95rem; margin-bottom: 0; }
+
       .breadcrumb { margin-bottom: 2rem; font-size: 0.95rem; }
       .breadcrumb a { color: #2563eb; text-decoration: none; }
       .breadcrumb a:hover { text-decoration: underline; }
       .breadcrumb span { color: #9ca3af; margin: 0 0.5rem; }
+      
+      .kpi-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+      .kpi-table th, .kpi-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
+      .kpi-table th { background: #f3f4f6; font-weight: 600; color: #111827; }
+      .kpi-table tr:hover { background: #f9fafb; }
     </style>
   </head>
   <body>
     <div class="site-shell">
-      <!-- Hlavička dokumentace -->
-      <header class="site-header" style="border-bottom: 1px solid #e5e7eb;">
+      <header class="site-header" style="border-bottom: 1px solid #e5e7eb; background: white;">
         <div class="container">
           <a class="brand" href="../clean/index.html" aria-label="Nabora domů">
             <img src="../clean/assets/logo.svg" alt="Nabora" onerror="this.src='https://nabora.cz/assets/logo.svg'" />
@@ -47,105 +63,178 @@
       <main class="docs-main">
         <div class="container-narrow">
           <div class="breadcrumb">
-            <a href="index.html">Dokumentace Nabora.cz</a> <span>/</span> Onboarding: B2B Obchod & Projekty
+            <a href="index.html">Dokumentace Nabora.cz</a> <span>/</span> Kompletní Onboarding: B2B Obchod
           </div>
 
           <article class="docs-article">
-            <h1>Onboarding Manuál: B2B Obchodník / Projektový Manažer</h1>
-            <p>Vítej v týmu Nabora.cz! Jsme projekt, který mění pravidla HR marketingu. Zatímco ostatní spoléhají na to, že si kandidát najde inzerát sám na portálech typu Jobs.cz, my aktivně doručujeme pracovní nabídky relevantním lidem na sociálních sítích (Meta, LinkedIn) a ve vyhledávačích (Google). Naším cílem je zajistit firmám zástup kvalitních uchazečů rychleji a až o 60 % levněji než klasičtí headhunteři.</p>
+            <h1>Onboarding Manuál: B2B Obchodník & Projektový Manažer</h1>
+            <p>Vítej v týmu Nabora.cz! Tvou misí je evangelizovat trh. Většina českých firem stále spoléhá na to, že kandidát k nim přijde sám, protože si přečte nudný text na inzertním portálu. My tento pasivní přístup měníme na aktivní lov (performance HR marketing).</p>
+            <p>Tento dokument je tvoje "Bible". Najdeš v ní vše od prvního kontaktu s klientem až po dlouhodobou péči o něj.</p>
 
-            <h2>1. Tvoje role, cíle a KPI</h2>
-            <p>Jako první obchodník a projektový manažer máš klíčovou roli. Není to jen o volání, jsi konzultant, který firmám pomáhá vyřešit jejich největší problém – nedostatek lidí.</p>
-            <h3>Tvé hlavní metriky (KPIs)</h3>
+            <!-- SEKCE 1: FIREMNÍ KULTURA A HODNOTY (NOVÉ) -->
+            <h2>1. Firemní kultura a jak pracujeme</h2>
+            <p>Než se pustíme do procesů, musíš pochopit, na jakých hodnotách Nabora.cz stojí. Nejsme korporát, jsme agilní tým, kde má každý přímý dopad na zisk firmy.</p>
             <ul>
-              <li><strong>Aktivita:</strong> 20-30 vytočených čísel denně (kvalifikované leady).</li>
-              <li><strong>Konverze do schůzek:</strong> 3–5 sjednaných videohovorů (Discovery calls) týdně.</li>
-              <li><strong>Konverze z nabídek:</strong> 1–2 uzavřené spolupráce týdně.</li>
+              <li><strong>Ownership (Vlastnictví):</strong> Nečekáš, až ti někdo přidělí práci. Lead sis našel, lead sis zavolal, klienta sis podepsal. Pokud je někde problém v kampani, jsi to ty, kdo zvedne telefon a komunikuje to s ním.</li>
+              <li><strong>Radical Candor (Radikální otevřenost):</strong> Pokud ti skript nefunguje, řekni to. Pokud děláme v marketingu něco špatně, řekni to. Očekáváme upřímný feedback a stejně upřímný feedback dostaneš ty na své hovory.</li>
+              <li><strong>Hodnota > Sleva:</strong> Neprodáváme nejlevnější inzerci. Prodáváme řešení, které klientovi ušetří měsíce stresu a statisíce za headhuntery. Neobhajuj cenu slevami, obhajuj ji dodanou hodnotou.</li>
             </ul>
 
-            <h3>Harmonogram zaškolení (První měsíc)</h3>
-            <ul>
-              <li><strong>Týden 1:</strong> Seznámení s produktem. Poslech starších callů. Nácvik argumentace (Role-play se zakladatelem). Vybudování první vlastní databáze 50 leadů. Prvních 10 zkušebních hovorů.</li>
-              <li><strong>Týden 2:</strong> Aktivní volání (cíl: 20 callů denně). Stínování na schůzkách, které vede seniornější kolega/zakladatel.</li>
-              <li><strong>Týden 3:</strong> Začínáš vést schůzky sám (zakladatel tě stínuje a dává feedback). První odeslané nabídky z tvých schůzek.</li>
-              <li><strong>Týden 4:</strong> Plná samostatnost. Komunikace s marketingem ohledně prvních podepsaných klientů.</li>
-            </ul>
-
-            <h2>2. Kdo je náš potenciální klient (ICP)</h2>
-            <p><strong>Obory, kde excelujeme:</strong></p>
-            <ul>
-              <li><strong>Výroba & Sklad:</strong> Dělníci, skladníci, seřizovači, mistři (Meta – Facebook/IG).</li>
-              <li><strong>IT & Vývoj:</strong> Vývojáři, analytici (LinkedIn a úzké cílení).</li>
-              <li><strong>Finance & Management:</strong> Účetní, kontroloři, C-level pozice (LinkedIn).</li>
-            </ul>
-            <p><strong>Osoby, se kterými jednáme (Buyer Personas):</strong></p>
-            <ol>
-              <li><strong>HR Manažer / Recruiter (Firmy nad 50 zaměstnanců):</strong> Jsou pod tlakem od manažerů oddělení, nemají dost CV. Chtějí partnera, který ulehčí práci.</li>
-              <li><strong>CEO / Majitel (Firmy do 50 zaměstnanců):</strong> Nemají HR oddělení, nábor dělají po večerech. Chtějí řešení na klíč.</li>
-            </ol>
-
-            <h2>3. Získávání leadů a denní rutina</h2>
-            <ul>
-              <li><strong>Pracovní portály (Jobs.cz, Prace.cz):</strong> Hledej inzeráty "TOP" nebo starší 14 dnů. Najdi kontakt na webu/LinkedInu.</li>
-              <li><strong>LinkedIn (Boolean Search):</strong> Hledej ("hledáme" OR "hiring") AND ("vývojář" OR "skladník").</li>
-              <li><strong>Investice a expanze:</strong> CzechCrunch, firmy stavějící haly budou nabírat.</li>
-            </ul>
-
-            <h3>Ideální rozvržení dne</h3>
-            <ul>
-              <li><strong>08:30 – 09:30:</strong> Prospecting (Příprava 15-20 leadů, CRM).</li>
-              <li><strong>09:30 – 11:30:</strong> Golden Hours pro volání (Soustřeď se jen na telefonování).</li>
-              <li><strong>11:30 – 12:00:</strong> Follow-upy (odesílání e-mailů s materiály).</li>
-              <li><strong>13:00 – 15:00:</strong> Online schůzky nebo volání blok II.</li>
-              <li><strong>15:00 – 16:30:</strong> Tvorba nabídek, předávání projektů do realizace.</li>
-            </ul>
-
-            <h2>4. Práce s CRM a Pipeline</h2>
-            <p>Každý kontakt musí být v tabulce. <strong>Zlatá pravidla:</strong> Každý lead musí mít vyplněný "Další krok" a "Datum". Zaznamenávej osobní detaily z hovorů (např. dovolená, specifický problém na pobočce).</p>
-
-            <h2>5. Cold Calling 2.0 (Kvalifikace a Skripty)</h2>
-            <p>Před nabídkou schůzky zjisti: <strong>Bolest</strong> (Chodí špatná CV?), <strong>Rozpočet</strong> (Inzerují placeně?), <strong>Pravomoc</strong> (Rozhodují oni?).</p>
+            <!-- SEKCE 2: KPI A PROVIZNÍ SYSTÉM (ROZŠÍŘENO) -->
+            <h2>2. Cíle, KPI a tvůj provizní systém</h2>
+            <p>Jsme orientovaní na výkon. Tvůj příjem není zastropovaný.</p>
             
-            <h3>Rozšířený Call Skript</h3>
-            <div class="script-box">
-              <p><strong>1. Úvod:</strong> "Dobrý den [Jméno], tady [Tvoje jméno] z Nabora.cz. Vím, že volám nečekaně, máte minutu, nebo vás ruším uprostřed něčeho důležitého?"</p>
-            </div>
-            <div class="script-box">
-              <p><strong>2. Kontext:</strong> "Důvod mého hovoru je, že jsem si všiml vašeho inzerátu na [Pozici] na Jobs.cz. Z našich dat vidím, že obsadit tuhle pozici čistě přes portály teď trvá i 3 měsíce. Můžu se zeptat, jak se s tou pozicí momentálně daří vám?"</p>
-            </div>
-            <div class="script-box">
-              <p><strong>3. Bolest:</strong> "Spousta našich klientů řeší totéž. Lidi, které vy chcete, aktivně nehledají. Řešili jste už, jak vaši nabídku dostat přímo k nim přes cílenou reklamu na sítích?"</p>
-            </div>
-            <div class="script-box">
-              <p><strong>4. Uzavření (CTA):</strong> "My uděláme z inzerátu skvělou reklamu a doručíme ho přímo do mobilu relevantním lidem. Dávalo by smysl sednout si na 15 minut přes Teams, kde vám ukážu přesné cílení pro [Pozici]?"</p>
+            <h3>Tvé denní a týdenní metriky (KPIs)</h3>
+            <table class="kpi-table">
+              <thead>
+                <tr>
+                  <th>Metrika</th>
+                  <th>Denní cíl</th>
+                  <th>Týdenní cíl</th>
+                  <th>Význam</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Prospecting (Nové leady)</strong></td>
+                  <td>15 - 20 firem</td>
+                  <td>100 firem</td>
+                  <td>Plnění horní části tvého "trychtýře" (pipeline).</td>
+                </tr>
+                <tr>
+                  <td><strong>Cold Calls (Vytočeno)</strong></td>
+                  <td>25+ hovorů</td>
+                  <td>125 hovorů</td>
+                  <td>Počet reálných pokusů o spojení s rozhodovatelem.</td>
+                </tr>
+                <tr>
+                  <td><strong>Discovery Calls (Schůzky)</strong></td>
+                  <td>1 sjednána</td>
+                  <td>4 - 6 proběhlých</td>
+                  <td>Kvalifikované online meetingy, kde prezentuješ Naboru.</td>
+                </tr>
+                <tr>
+                  <td><strong>Uzavřené Deals (Win)</strong></td>
+                  <td>-</td>
+                  <td>1 - 2 spolupráce</td>
+                  <td>Podepsané objednávky na náborovou kampaň.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Odměňovací model (Příklad)</h3>
+            <ul>
+              <li><strong>Fixní základ:</strong> Odměna za tvou stabilitu a správu stávajících klientů.</li>
+              <li><strong>Provize z prvního prodeje:</strong> X % z každé prodané kampaně novému klientovi.</li>
+              <li><strong>Provize z upsellu (Farming):</strong> Y % z každé další pozice, kterou si u nás stejný klient objedná (vyplatí se o klienty pečovat a budovat s nimi vztah!).</li>
+              <li><strong>Kvartální bonus:</strong> Při splnění kvartálního targetu (např. 15 uzavřených dealů) extra bonus.</li>
+            </ul>
+
+            <!-- SEKCE 3: TECHNOLOGICKÝ STACK (NOVÉ) -->
+            <h2>3. Náš technologický stack (Tooling)</h2>
+            <p>K dosažení cílů budeš denně pracovat v těchto nástrojích:</p>
+            <div class="tool-grid">
+              <div class="tool-card">
+                <h4><i data-lucide="database"></i> CRM Systém</h4>
+                <p><strong>Raynet / Pipedrive:</strong> Centrální mozek. Zde žijí tvé leady, historie komunikace, nahrávky z hovorů a pipeline dealů.</p>
+              </div>
+              <div class="tool-card">
+                <h4><i data-lucide="search"></i> Získávání kontaktů</h4>
+                <p><strong>LinkedIn Sales Navigator / Apollo.io:</strong> Slouží k rychlému vyhledání e-mailů a přímých telefonních čísel na HR manažery a CEO.</p>
+              </div>
+              <div class="tool-card">
+                <h4><i data-lucide="video"></i> Schůzky a Demo</h4>
+                <p><strong>Google Meet / MS Teams:</strong> Zde vedeš videohovory. Důležité: Měj vždy zapnutou kameru a profesionální pozadí.</p>
+              </div>
+              <div class="tool-card">
+                <h4><i data-lucide="message-square"></i> Interní komunikace</h4>
+                <p><strong>Slack:</strong> Tudy zadáváš klienty do výroby, domlouváš se s copywritery a řešíš operativu kampaní.</p>
+              </div>
             </div>
 
-            <h2>6. Struktura Discovery Schůzky</h2>
-            <p>Tvá schůzka by měla trvat 20-30 minut:</p>
+            <!-- SEKCE 4: LEAD GENERATION A LINKEDIN (ROZŠÍŘENO) -->
+            <h2>4. Akvizice: Kde hledáme klienty</h2>
+            
+            <h3>Klasické zdroje (Pracovní portály)</h3>
+            <p>Firmy, které mají na portálech inzeráty s "TOP" štítkem nebo "Hledáme naléhavě", utrácejí peníze, ale nevidí výsledek. To je náš primární cíl.</p>
+            
+            <h3>Moderní zdroje (LinkedIn Outreach)</h3>
+            <p>Mnoho moderních HR manažerů hledá přímo na LinkedInu. Využívej tzv. Boolean operátory pro vyhledávání postů (obsahu), ne jen profilů:</p>
+            <ul>
+              <li><code>"hledáme nového kolegu" AND "vývojář"</code></li>
+              <li><code>"rozšiřujeme tým" AND "logistika"</code></li>
+              <li><code>"hiring" AND "CFO" AND "Prague"</code></li>
+            </ul>
+
+            <h4>Šablona pro LinkedIn Zprávu (InMail / Spojení)</h4>
+            <div class="script-box">
+              <p>Ahoj [Jméno], viděl jsem tvůj post, že do [Název firmy] hledáte [Název pozice]. Zrovna včera jsme podobnou seniorní pozici úspěšně dotáhli pro firmu z vašeho oboru pomocí cílené kampaně na [LinkedInu/Facebooku].</p>
+              <p>Pokud byste chtěli posílit dosah mimo váš organický network a nechcete platit 20% fee headhunterům, dej vědět. Rád ti v rychlosti ukážu, jak to děláme. Dával by ti smysl 10minutový call tento čtvrtek?</p>
+            </div>
+
+            <!-- SEKCE 5: ADVANCED COLD CALLING A NÁMITKY -->
+            <h2>5. Cold Calling a Mistrovské zvládání námitek</h2>
+            <p>Telefon je stále nejrychlejší cesta k penězům. Základní scénář (Úvod -> Kontext -> Bolest -> CTA) už znáš. Co ale dělat, když klient vzdoruje?</p>
+
+            <div class="objection-box">
+              <h4><i data-lucide="alert-circle"></i> Námitka: "Sociálním sítím nevěříme. Svářeči/Manažeři na Facebooku nejsou."</h4>
+              <p><strong>Tvoje reakce:</strong> "Rozumím té skepsi, paní Nováková. Znělo by to zvláštně, hledat top manažera mezi kočičími videi. Ale pravda je taková, že na sítích jsou dnes úplně všichni – průměrný Čech tam stráví 2,5 hodiny denně. My na ně necílíme podle toho, co lajkují, ale pracujeme s úzkým B2B cílením (např. přes propojení dat z LinkedInu). Dovolte mi ukázat vám případovou studii, kde jsme na FB našli Finančního ředitele pro [podobná firma]."</p>
+            </div>
+
+            <div class="objection-box">
+              <h4><i data-lucide="alert-circle"></i> Námitka: "Máme vlastní interní marketingový tým, udělají nám to sami."</h4>
+              <p><strong>Tvoje reakce:</strong> "To je skvělé, že máte in-house kapacity! Většinou ale vidíme, že firemní marketing řeší primárně prodej vašich produktů a budování brandu pro zákazníky. Náborový marketing (HR) vyžaduje úplně jinou psychologii reklam a jiné texty. My nepíšeme 'kupte si', my prodáváme změnu životního stylu kandidáta. Spolupracujeme s interními markeťáky běžně – oni hlídají brand manuál, my přinášíme know-how na nábor. Pojďme si na 10 minut sednout i s vaším markeťákem."</p>
+            </div>
+
+            <div class="objection-box">
+              <h4><i data-lucide="alert-circle"></i> Námitka: "Zrovna minulý měsíc jsme podepsali exkluzivitu s personálkou."</h4>
+              <p><strong>Tvoje reakce:</strong> "Rozumím. Nechci vám teď bourat vaše plány, personálky mají své místo na trhu. Ale víte, jak to bývá – někdy ani oni nedodají lidi včas nebo v požadované kvalitě. Navíc za ně platíte stotisícové provize. Buďme teď jen v kontaktu. Ukažme si za 10 minut na Teams, jak pracujeme my, a až vám příště agentura nedodá lidi v termínu, budete vědět, komu zavolat jako záloze. Kdy máte příští týden čas?"</p>
+            </div>
+
+            <!-- SEKCE 6: SCHŮZKA A BANT KVALIFIKACE -->
+            <h2>6. Discovery Schůzka (BANT metoda)</h2>
+            <p>Schůzka není tvoje přednáška. Klient by měl mluvit 70 % času. Musíš zjistit <strong>BANT</strong>:</p>
+            <ul>
+              <li><strong>B - Budget (Rozpočet):</strong> Mají alokované peníze? (Otázka: <em>"Kolik vás průměrně stojí obsazení této pozice, když započítáte inzeráty a čas HR?"</em>)</li>
+              <li><strong>A - Authority (Pravomoc):</strong> Mluvíš s člověkem, který má kartu od firmy? (Otázka: <em>"Až se shodneme na řešení, kdo další z firmy se bude podílet na finálním schválení kampaně?"</em>)</li>
+              <li><strong>N - Need (Potřeba):</strong> Jak moc je to bolí? (Otázka: <em>"Co to pro firmu znamená finančně, když tenhle seniorní vývojář nenastoupí ještě dalšího půl roku?"</em>)</li>
+              <li><strong>T - Timing (Časování):</strong> Kdy chtějí pozici obsadit? (Otázka: <em>"Kdy ideálně potřebujete, aby měl ten člověk nohy pod stolem ve vaší kanceláři?"</em>)</li>
+            </ul>
+
+            <!-- SEKCE 7: POST-SALES A ACCOUNT MANAGEMENT (NOVÉ) -->
+            <h2>7. Post-Sales: Péče o klienta a Upselling (Farming)</h2>
+            <p>Získat nového klienta stojí 5x víc úsilí než prodat znovu tomu stávajícímu. Tvoje práce nekončí podpisem, naopak – začíná fáze <strong>Account Managementu</strong>.</p>
+            
+            <h3>Proces po podepsání smlouvy:</h3>
             <ol>
-              <li><strong>Rapport (2 min):</strong> Uvolnění atmosféry.</li>
-              <li><strong>Kvalifikace (10 min):</strong> Klient mluví. Ptej se: "Kolik CV přijde měsíčně?", "Co se stane, když neobsadíte?".</li>
-              <li><strong>Prezentace (10 min):</strong> Ukaž příklady našich reklam a případové studie.</li>
-              <li><strong>Další kroky (5 min):</strong> Dohoda o zaslání nabídky a dalšího termínu hovoru.</li>
+              <li><strong>Kick-off call (Onboarding klienta):</strong> Krátký hovor (ty, klient a případně náš markeťák). Vyplnění briefu – proč by u nich měl někdo pracovat? Jaká je mzda? Vyžádání reálných fotek z firmy (konec fotobankám!).</li>
+              <li><strong>Interní předání (Handover):</strong> Vytvoření ticketu ve Slacku. Předáš podklady copywriterovi a grafikovi.</li>
+              <li><strong>Schvalovací kolečko:</strong> Odesíláš hotové texty a vizuály klientovi ke schválení se slovy: <em>"Tohle je přesně ta emoce, kterou chceme kandidátům předat. Můžeme spouštět?"</em></li>
             </ol>
 
-            <h2>7. Realizace a předání projektu (Hand-over)</h2>
-            <p>Prodej nekončí podpisem smlouvy:</p>
-            <ol>
-              <li><strong>Onboarding brief:</strong> Zjištění benefitů, získání fotek.</li>
-              <li><strong>Předání (Slack/Trello):</strong> Zadání týmu (copy, grafika, kampaně).</li>
-              <li><strong>Follow-up:</strong> Týdenní kontrola kvality CV s klientem.</li>
-              <li><strong>Upsell:</strong> Pokud jsou spokojení, ptej se na další pozice k obsazení.</li>
-            </ol>
+            <h3>Týdenní Check-in a Optimalizace</h3>
+            <p>Každý pátek klientovi zavoláš nebo napíšeš. Nejen abys mu poslal report z Meta Ads, ale abys zjistil <strong>byznysovou zpětnou vazbu</strong>:</p>
+            <ul>
+              <li><em>"Z reklamních systémů vidím, že jsme vám tento týden doručili 12 kontaktů. Už jste s nimi mluvili?"</em></li>
+              <li><em>"Byli relevantní? Nebo máme v kampani zpřísnit filtr na roky praxe?"</em></li>
+            </ul>
+
+            <h3>Upsell a QBR (Quarterly Business Review)</h3>
+            <p>Pokud kampaň funguje a dodali jsme člověka (tzv. "Aha moment" klienta), okamžitě se ptej na další pozice: <em>"Super, že účetní už nastupuje. Vím, že jste minule zmiňoval i nedostatek skladníků. Máme rovnou připravit kampaň na ně?"</em></p>
+            <p>U větších firem sjednej jednou za 3 měsíce schůzku (QBR), kde shrnete úspory (kolik ušetřili za headhuntery s naší pomocí) a naplánujete náborovou strategii na další kvartál.</p>
+
+            <div style="margin-top: 4rem; padding: 2rem; background: #0d284a; color: white; border-radius: 12px; text-align: center;">
+              <h3 style="color: white; margin-top: 0;">Jsi připraven vyrazit na lov?</h3>
+              <p style="color: #cbd5e1; margin-bottom: 0;">Úspěch v Nabora.cz není o talentu, je to o konzistenci, disciplíně a schopnosti nenechat se odradit slovem "NE". Přejeme ti stovky úspěšných callů a miliony v provizích!</p>
+            </div>
 
           </article>
         </div>
       </main>
       
-      <!-- Jednoduchá patička -->
       <footer style="background: #0d284a; color: white; padding: 2rem 0; text-align: center;">
         <div class="container">
-          <p style="opacity: 0.7; font-size: 0.9rem;">&copy; 2026 Nabora.cz — Interní dokumentace</p>
+          <p style="opacity: 0.7; font-size: 0.9rem;">&copy; 2026 Nabora.cz — Interní dokumentace a procesy</p>
         </div>
       </footer>
     </div>
